@@ -9,7 +9,7 @@
 html {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 @media only screen and (max-width: 800px) {
   html {
@@ -20,7 +20,9 @@ html {
 body {
   background-color: #000;
   color: #fff;
-  padding: 8rem;
+  padding: 1.5rem;
+  /* transform: scale(translateX(5)); */
+
 }
 @media only screen and (max-width: 1000px) {
   body {
@@ -31,7 +33,7 @@ body {
 .container {
   position: relative;
   overflow: hidden;
-  border-radius: 5rem;
+  border-radius: 2rem;
 }
 @media only screen and (max-width: 1000px) {
   .container {
@@ -42,7 +44,7 @@ body {
 .slider {
   display: flex;
   width: 500%;
-  height: 55rem;
+  height: 42rem;
   transition: all 0.25s ease-in;
   transform: translateX(0);
 }
@@ -213,9 +215,9 @@ body {
 .slider .box5 {
   background-color: #300050;
 }
-.slider .box5 .illustration .inner {
+/* .slider .box5 .illustration .inner {
   background-color: #8000ff;
-}
+} */
 /* .slider .box5 .illustration .inner::after,
 .slider .box5 .illustration .inner::before {
   background-color: rgba(128, 0, 255, 0.4);
@@ -283,29 +285,31 @@ body {
 }
 
 .inner4 {
-  height: 30rem;
-  width: 22.5rem;
+  height: 25rem;
+  width: 24rem;
   border-radius: 3rem;
-  background-image: url(./Images/phone.png);
+  background-image: url(./Images/music.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   position: relative;
   overflow: hidden;
   transform: skewX(-10deg);
 }
 
 .inner5 {
-  height: 30rem;
-  width: 22.5rem;
+  height: 48rem;
+  width: 42rem;
+  /* max-width: 20px; */
   border-radius: 3rem;
-  background-image: url(./Images/phone.png);
+  background-image: url(./Images/progress.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   position: relative;
-  overflow: hidden;
-  transform: skewX(-10deg);
+  overflow: hidden; 
+  /* transform: skewX(-10deg); */
+  transform: scale(0.4);
 }
 @media only screen and (max-width: 800px) {
   .slider .illustration div {
