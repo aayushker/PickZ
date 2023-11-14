@@ -3,11 +3,11 @@
 *:after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  /* box-sizing: inherit; */
 }
 
 html {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   font-family: "Roboto", sans-serif;
   /* font-size: 62.5%; */
 }
@@ -33,7 +33,7 @@ body {
 .container {
   position: relative;
   overflow: hidden;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
 }
 @media only screen and (max-width: 1000px) {
   .container {
