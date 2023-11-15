@@ -18,11 +18,7 @@ html {
 }
 
 body {
-  background-color: #000;
-  color: #fff;
-  padding: 1.5rem;
   /* transform: scale(translateX(5)); */
-
 }
 @media only screen and (max-width: 1000px) {
   body {
@@ -34,6 +30,9 @@ body {
   position: relative;
   overflow: hidden;
   /* border-radius: 2rem; */
+  background-color: #000;
+  color: #fff;
+  /* padding: 1.5rem; */
 }
 @media only screen and (max-width: 1000px) {
   .container {
@@ -307,7 +306,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
   /* transform: skewX(-10deg); */
   transform: scale(0.4);
 }
@@ -372,15 +371,16 @@ body {
 }
 
 .trail {
-  bottom: 5%;
+  bottom: 1%;
   left: 50%;
   transform: translateX(-50%);
-  width: 60%;
+  width: 20%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   text-align: center;
   font-size: 1.5rem;
+  border-radius: 40px;
 }
 @media only screen and (max-width: 650px) {
   .trail {
@@ -406,4 +406,29 @@ body {
 
 .active {
   opacity: 1 !important;
+}
+
+.hero h2 {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h2::before,
+.hero h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
 }
