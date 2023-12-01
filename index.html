@@ -55,7 +55,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav><!-- End Nav Menu -->
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
 
     </div>
   </header><!-- End Header -->
@@ -150,7 +150,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
               <p>Phones</p>
             </div>
           </div><!-- End Stats Item -->
@@ -324,10 +324,10 @@
             <div class="member-img">
               <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
               <div class="social">
-                <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="bi bi-github"></i></a>
-                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://twitter.com/daultani_gaurav" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/gaurav-daultani-933b56230/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/gauravdaultani" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://instagram.com/gaurav.daultani_27" target="_blank"><i class="bi bi-instagram"></i></a>
               </div>
             </div>
             <div class="member-info text-center">
@@ -585,6 +585,48 @@
     <div></div>
     <div></div>
     <div></div>
+  </div>
+
+  <!-- chatbot -->
+  <div>
+    <p style="text-align: center;">Botpress Chatbot in a <span><</span><span>div></span></p>
+    <div class="absolute inset-4 ">
+      <div
+        class="center-div relative h-full w-full overflow-clip rounded-md border border-zinc-200 bg-white p-2 px-0 py-0"
+      >
+        <iframe
+          style="border: none;"
+          srcdoc="<script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+          <script>
+            window.botpressWebChat.init({
+                'composerPlaceholder': 'Chat with bot',
+                'botConversationDescription': 'This chatbot was built surprisingly fast with Botpress',
+                'botName': 'Name',
+                'botId': 'f87c4530-e481-49dd-8841-236d83aa1389',
+                'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
+                'messagingUrl': 'https://messaging.botpress.cloud',
+                'clientId': 'f87c4530-e481-49dd-8841-236d83aa1389',
+                'enableConversationDeletion': true,
+                'showPoweredBy': true,
+                'className': 'webchatIframe',
+                'containerWidth': '100%25',
+                'layoutWidth': '100%25',
+                'hideWidget': true,
+                'showCloseButton': false,
+                'disableAnimations': true,
+                'closeOnEscape': false,
+                'showConversationsButton': false,
+                'enableTranscriptDownload': false,
+                'stylesheet':'https://webchat-styler-css.botpress.app/prod/code/3fcd3e4e-d5bc-4bf5-8699-14b621b3ada2/v31782/style.css'
+                
+            });
+          window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+          </script>"
+          width="100%"
+          height="100%"
+        ></iframe>
+      </div>
+    </div>
   </div>
 
   <!-- Vendor JS Files -->
