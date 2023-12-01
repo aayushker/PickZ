@@ -1,0 +1,239 @@
+*{
+    padding: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+.div{
+    display: inline;
+    display:flex;
+}
+.img{
+    height:50px;
+    width:50px;
+    border-radius: 2px;
+    margin-top: 5px;
+
+}
+.searchbar{
+    margin-top:5px;
+    width:100%;
+    height:50px;
+}
+nav{
+    padding: 5px;
+    margin-top: 6px;
+    font-size: 20px;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.navele{
+text-decoration: none;
+justify-content: space-between;
+padding: 50px;
+}
+.navele:hover{
+    color:black;
+    text-decoration: underline;
+    cursor:ponter;
+}
+.navele:onclick{
+color:blue;
+text-decoration: solid;
+text-transform: capitalize;
+text-shadow: 0cap;
+
+}
+.carousel slide{
+    height:50px;
+    width:100px;
+    border-color: blueviolet;
+}
+.asus{
+    display:flex;
+}
+.asusimg{
+    height:250px;
+    width:250px;
+    border-radius:10px;
+    border-color: black;
+    margin-left:20px;
+    padding:30px;
+    transition:2s;
+    
+    
+}
+.asush{
+    color:black;
+    text-align: center;
+    margin-top:4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 150px;
+    color:black;
+}
+.asusimg:hover{
+    cursor:pointer;
+    transform:scale(1.3);
+    z-index:2;
+
+
+}
+.asusproduct{
+    display:flex;
+    padding: 20px;
+    justify-content: space-between;
+    
+}
+.pasus{
+    color:black;
+    font-size: medium;
+}
+.asusimg2{
+    border-radius: 5px;
+    border-color:2px solid  black;
+    margin-left:6px;
+    justify-content: space-between;
+}
+.lenovo{
+    display:flex;
+}
+.lenovoh{
+font-size: 100px;
+font-weight: 600;
+color: black;
+font-style: italic;
+margin-top: 50px;
+
+}
+.lenovoimg{
+    height:250px;
+    width:250px;
+    padding:40px;
+
+}
+.lenovoproduct{
+    display:flex;
+    padding:30px;
+    justify-content: space-between;
+}
+.pasus{
+    color:black;
+    font-size: 20px;
+}
+.lenovoimg2{border-radius: 5px;
+    border-color:2px solid  black;
+    margin-left:6px;
+    justify-content: space-between;
+    
+
+}
+.lenovoimg{
+    height:250px;
+    width:250px;
+    transition:3s;
+}
+.lenovoimg:hover{
+    cursor:pointer;
+    transform:scale(1.3);
+    z-index:2;
+
+}
+.hp{
+    display:flex;
+    padding:20px;
+    justify-content: space-between;
+
+}
+.hph{
+        font-size:150px;
+        font-family: sans-serif;
+        font-style: italic;
+
+
+
+}
+.hpimg{
+    height:250px;
+    width:250px;
+    transition:3s;
+}
+.hpimg:hover{
+    cursor:pointer;
+    transform:scale(1.3);
+    z-index:2;
+
+}
+.dell{
+    display: flex;
+}
+.dellh{
+    font-size: 100px;
+    font-style: italic;
+    font-weight: 600;
+
+}
+.dellimg{
+    height:250px;
+    width:250px;
+    margin-top:-45px;
+    padding: 5px;
+    justify-content: space-between;
+}
+.dellimg1{
+    margin-top:5px;
+    height:150px;
+
+}
+.dellproduct{
+    display:flex;
+    justify-content: space-between;
+}
+.apple{
+    display:flex;
+    justify-content: space-between;
+}
+.appleh{
+    font-size: 100px;
+    font-weight: 600;
+    font-style: italic;
+
+}
+.appleimg{
+    height:150px;
+    width:250px;
+    justify-content: space-between;
+    margin-top:42px;
+
+}
+.appleproduct{
+    display:flex;
+    justify-content: space-between;
+}
+.hph{
+    font-size: 100px;
+    font-weight: 600;
+    font-style: italic;
+}
+.hpproduct{
+    display:flex;
+    justify-content: space-between;
+}
+.card:hover{
+    transform:translateY(20px);
+
+}
+.card:before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:100%;
+    height:100%;
+    background: linear-gradient(to bottom,rgba(0,176,155,.5));
+    z-index:2;
+    transition:.5s all;
+    opacity:1;
+}
+
