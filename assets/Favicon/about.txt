@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Bubblegum Sans
+- Font Author: Copyright (c) 2011 Angel Koziupa (sudtipos@sudtipos.com), Copyright (c) 2011 Alejandro Paul (sudtipos@sudtipos.com), with Reserved Font Name "Bubblegum Sans"
+- Font Source: http://fonts.gstatic.com/s/bubblegumsans/v20/AYCSpXb_Z9EORv1M5QTjEzMEtdaHzoPPb7R4.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
