@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/Favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/Favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/Favicon/favicon-16x16.png">
-  <link rel="manifest" href="./assets/Favicon/site.webmanifest">
-  <link rel="stylesheet" href="./assets/css/H&F.css">
-  <link rel="stylesheet" href="./assets/css/laptop.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/Favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/Favicon/site.webmanifest">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- <link href="/assets/vendor/aos/aos.css" rel="stylesheet"> -->
 
-  <title>Laptops</title>
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/laptop.css">
+
+  <title>PickZ - Laptops</title>
+
 </head>
 
 <body>
-  <div class="div">
-    <img class="img"
-      src="https://imgs.search.brave.com/vaZyBYPvrxrx3cf3Y2FY1-5lOYltMyHjRHYUyAgZdbo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1wc2Qvd2Vi/c2l0ZS10ZW1wbGF0/ZS1sYXB0b3Atc2Ny/ZWVuXzUzODc2LTU3/Mjk3LmpwZz9zaXpl/PTYyNiZleHQ9anBn"
-      alt="">
-    <input type="search" placeholder="Search Here" class="searchbar"></nav>
-  </div>
-  <div>
-    <nav><a class="navele" href="#">Home</a>
-      <a class="navele" href="#">Laptops</a>
-      <a class="navele" href="#">Compare</a>
-      <a class="navele" href="#">Other Info</a>
-      <a class="navele" href="#">Preffered Brands
-      </a>
-    </nav>
-  </div>
 
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>PickZ</h1>
+        <span>.</span>
+      </a>
+
+      <!-- Nav Menu -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero" class="active">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#features">Lineup</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <!-- End Nav Menu -->
+
+      <!-- <a class="btn-getstarted" href="index.html#features">Get Started</a> -->
+      <a href="index.html#features"></a>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <br><br>
+  <br><br>
+  <br><br>
+
+  </div>
   <div class="asus"><br>
     <h1 class="asush">Asus</h1>
     <img class="asusimg"
@@ -322,13 +338,14 @@
     </div>
   </div>
 
+
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="/index.html" class="logo d-flex align-items-center">
             <span>PickZ</span>
           </a>
           <p>Providing solutions to every individual.</p>
@@ -343,21 +360,21 @@
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About us</a></li>
-            <li><a href="#team">Know us</a></li>
-            <li><a href="./assets/supplements/t&c.html">Terms & Conditions</a></li>
-            <li><a href="./assets/supplements/privacypolicy.html">Privacy policy</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html#about">About us</a></li>
+            <li><a href="/index.html#team">Know us</a></li>
+            <li><a href="/assets/supplements/t&c.html">Terms & Conditions</a></li>
+            <li><a href="/assets/supplements/privacypolicy.html">Privacy policy</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#features">Phone</a></li>
-            <li><a href="#features">Tablet</a></li>
-            <li><a href="#features">Laptop</a></li>
-            <li><a href="#features">Audio Products</a></li>
+            <li><a href="/index.html#phone">Phone</a></li>
+            <li><a href="/index.html#tablet">Tablet</a></li>
+            <li><a href="/index.html#laptop">Laptop</a></li>
+            <li><a href="/index.html#audio">Audio Products</a></li>
             <!-- <li><a href="#features">Graphic Design</a></li> -->
           </ul>
         </div>
@@ -375,7 +392,8 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>&copy; <span>Copyright</span> <strong class="px-1">PickZ</strong> <span>All Rights Reserved</span></p>
+      <p>&copy; <span>Copyright</span> <strong class="px-1">PickZ</strong> <span>All Rights Reserved</span>
+      </p>
       <div class="credits">
         Designed by <a href="https://github.com/aayushker" target="_blank">Aayushker Singh</a>
       </div>
@@ -383,10 +401,22 @@
 
   </footer><!-- End Footer -->
 
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
   <!-- chatbot -->
-<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script>
-  window.botpressWebChat.init({
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
       "composerPlaceholder": "Chat with PickZ",
       "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
       "botId": "69f03d93-47fb-4f42-b407-80c8e7e54ad9",
@@ -403,20 +433,24 @@
       "useSessionStorage": true,
       "theme": "prism",
       "themeColor": "#2563eb"
-  });
-</script>
+    });
+  </script>
+
+  <!-- script -->
+  <script src="/assets/js/checkout.js"></script>
+
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 
 </body>
 
