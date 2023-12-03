@@ -66,6 +66,8 @@ function determineUrl(keyword) {
         return "/assets/supplements/privacypolicy.html";
     } else if (keyword === "terms and conditions") {
         return "/assets/supplements/t&c.html";
+    } else if (keyword === "lineup") {
+        return "/index.html#features";
     } else {
         return "/index.html#" + encodeURIComponent(keyword);
     }

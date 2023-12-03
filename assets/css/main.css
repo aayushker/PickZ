@@ -1,6 +1,8 @@
 /* Fonts */
 :root {
-  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Montserrat", sans-serif;
   --nav-font: "Lato", sans-serif;
 }
@@ -139,11 +141,11 @@ section {
   font-weight: 600;
 }
 
-.page-title nav ol li+li {
+.page-title nav ol li + li {
   padding-left: 10px;
 }
 
-.page-title nav ol li+li::before {
+.page-title nav ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -301,7 +303,7 @@ section {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -339,11 +341,11 @@ section {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -355,7 +357,7 @@ section {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -389,7 +391,7 @@ section {
   }
 
   .navmenu .megamenu ul li a,
-  .navmenu .megamenu ul li:hover>a {
+  .navmenu .megamenu ul li:hover > a {
     padding: 10px 20px;
     font-size: 15px;
     color: var(--nav-dropdown-color);
@@ -401,7 +403,7 @@ section {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .megamenu:hover>ul {
+  .navmenu .megamenu:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -506,8 +508,8 @@ section {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active,
-  .navmenu .megamenu>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active,
+  .navmenu .megamenu > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -534,7 +536,7 @@ section {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -852,7 +854,7 @@ section {
   box-shadow: none;
 }
 
-.hero .sign-up-form input[type=submit] {
+.hero .sign-up-form input[type="submit"] {
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -861,7 +863,7 @@ section {
   color: var(--contrast-color);
 }
 
-.hero .sign-up-form input[type=submit]:hover {
+.hero .sign-up-form input[type="submit"]:hover {
   background-color: rgba(var(--primary-color-rgb), 0.9);
 }
 
@@ -875,32 +877,29 @@ section {
   }
 }
 
-
-.result-box{
+.result-box {
   border-top: lpx solid #999;
- 
-  
-  padding: 0px 10px;  
-  max-height:200px ;
+  padding: 0px 10px;
+  max-height: 200px;
   overflow: scroll;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-}
-.result-box::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 
-.result-box ul{
+.result-box::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.result-box ul {
   border-top: 1px solid #fb0000;
   border-bottom: 1px solid #fb0000;
   color: #000000;
   background-color: #ffffff;
   padding: 15px 10px;
   margin: 0;
-
 }
 
-.result-box ul li{
+.result-box ul li {
   list-style: none;
   border-radius: 3px;
   padding: 15px 10px;
@@ -908,7 +907,7 @@ section {
   transition: background-color 0.3s ease;
 }
 
-.result-box ul li:hover{
+.result-box ul li:hover {
   background: #f0f5ff;
 }
 
@@ -1044,7 +1043,6 @@ section {
 }
 
 @media (max-width: 768px) {
-
   .about .icon-boxes .col-md-6:nth-child(2) .icon-box,
   .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
     margin-top: 0;
@@ -1189,12 +1187,12 @@ section {
   color: rgba(var(--default-color-rgb), 0.8);
 }
 
-.features .features-item+.features-item {
+.features .features-item + .features-item {
   margin-top: 100px;
 }
 
 @media (max-width: 768px) {
-  .features .features-item+.features-item {
+  .features .features-item + .features-item {
     margin-top: 40px;
   }
 }
@@ -1277,7 +1275,7 @@ section {
 
 .features .features-item .image-stack .stack-front {
   grid-row: 1;
-  grid-column: 1/span 8;
+  grid-column: 1 / span 8;
   margin-top: 20%;
   width: 100%;
   z-index: 2;
@@ -1883,7 +1881,6 @@ section {
 }
 
 @media (max-width: 767px) {
-
   .testimonials .testimonials-carousel,
   .testimonials .testimonials-slider {
     overflow: hidden;
@@ -2021,8 +2018,8 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -2033,25 +2030,25 @@ section {
   border-color: rgba(var(--default-color-rgb), 0.2);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--primary-color);
 }
 
-.contact .php-email-form input[type=text]::-moz-placeholder,
-.contact .php-email-form input[type=email]::-moz-placeholder,
+.contact .php-email-form input[type="text"]::-moz-placeholder,
+.contact .php-email-form input[type="email"]::-moz-placeholder,
 .contact .php-email-form textarea::-moz-placeholder {
   color: rgba(var(--default-color-rgb), 0.3);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type="text"]::placeholder,
+.contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: rgba(var(--default-color-rgb), 0.3);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: var(--primary-color);
   color: var(--contrast-color);
   border: 0;
@@ -2060,7 +2057,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: rgba(var(--primary-color-rgb), 0.8);
 }
 
@@ -2113,7 +2110,6 @@ section {
 }
 
 @media (max-width: 575px) {
-
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
     display: none;
@@ -2245,7 +2241,7 @@ section {
   box-shadow: 0px 2px 20px rgba(var(--default-color-rgb), 0.12);
 }
 
-.service-details .service-box+.service-box {
+.service-details .service-box + .service-box {
   margin-top: 30px;
 }
 
@@ -2537,7 +2533,7 @@ section {
   margin: 0;
 }
 
-.blog-details .meta-top ul li+li {
+.blog-details .meta-top ul li + li {
   padding-left: 20px;
 }
 
@@ -2596,7 +2592,7 @@ section {
   display: inline-block;
 }
 
-.blog-details .meta-bottom .tags li+li::before {
+.blog-details .meta-bottom .tags li + li::before {
   padding-right: 6px;
   color: var(--default-color);
   content: ",";
@@ -2623,7 +2619,7 @@ section {
   margin: 0;
 }
 
-.blog-details .sidebar .sidebar-item+.sidebar-item {
+.blog-details .sidebar .sidebar-item + .sidebar-item {
   margin-top: 40px;
 }
 
@@ -2634,7 +2630,7 @@ section {
   position: relative;
 }
 
-.blog-details .sidebar .search-form form input[type=text] {
+.blog-details .sidebar .search-form form input[type="text"] {
   border: 0;
   padding: 4px;
   border-radius: 4px;
@@ -2643,7 +2639,7 @@ section {
   color: var(--default-color);
 }
 
-.blog-details .sidebar .search-form form input[type=text]:focus {
+.blog-details .sidebar .search-form form input[type="text"]:focus {
   outline: none;
 }
 
@@ -2676,7 +2672,7 @@ section {
   padding: 0;
 }
 
-.blog-details .sidebar .categories ul li+li {
+.blog-details .sidebar .categories ul li + li {
   padding-top: 10px;
 }
 
