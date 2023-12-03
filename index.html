@@ -18,7 +18,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -80,9 +82,11 @@
           </div>
           <div class="col-lg-5">
             <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-              <input type="text" class="form-control" placeholder="Search for the Product">
+              <input type="text" class="form-control" placeholder="Search for the Product" autocomplete="additional-name">
               <input type="submit" class="btn btn-primary" value="Search">
             </form>
+            <div class="result-box">
+            </div>
           </div>
         </div>
       </div>
@@ -107,7 +111,7 @@
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
-                 <i class="bi bi-clipboard-pulse"></i>
+                  <i class="bi bi-clipboard-pulse"></i>
                   <h3>Curated for 'You'</h3>
                   <p>The algorithm detects your needs and suggests you the <strong>best possible product</strong>.</p>
                 </div>
@@ -122,18 +126,19 @@
               </div> <!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                  <div class="icon-box">
-                    <i class="bi bi-graph-up-arrow"></i>
-                    <h3>Faster</h3>
-                    <p><strong>Saves hours</strong> of tirelessly searching for the right product.</p>
-                  </div>
+                <div class="icon-box">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <h3>Faster</h3>
+                  <p><strong>Saves hours</strong> of tirelessly searching for the right product.</p>
+                </div>
               </div><!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box">
                   <i class="bi bi-command"></i>
                   <h3>Get the best Deal</h3>
-                  <p>We not only suggest you the best product but also suggest you the place where you can get it at <strong>best price</strong>.</p>
+                  <p>We not only suggest you the best product but also suggest you the place where you can get it at
+                    <strong>best price</strong>.</p>
                 </div>
               </div> <!-- End Icon Box -->
 
@@ -148,35 +153,39 @@
     <!-- Stats Section - Home Page -->
     <section id="stats" class="stats">
 
-      <img src="assets/img/stats-bg.jpg" alt="" >
+      <img src="assets/img/stats-bg.jpg" alt="">
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Phones</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Tablets</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Laptops</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Audio Products</p>
             </div>
           </div><!-- End Stats Item -->
@@ -199,7 +208,7 @@
       <div class="container">
 
         <div class="row gy-4 align-items-stretch justify-content-between features-item " id="phone">
-          
+
           <div class="col-lg-4 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Mobile Phones</h3>
             <p>We have options for you in brands like Apple, Samsung, Mi, Motorola, Oneplus ,and many
@@ -207,13 +216,16 @@
             <a href="mobile.html" class="btn btn-get-started align-self-start">Explore</a>
           </div>
           <div class="col-lg-5 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="https://img.freepik.com/free-vector/woman-man-holding-coffee-while-look-phone-check-social-media_10045-652.jpg" class="img-fluid" alt="">
+            <img
+              src="https://img.freepik.com/free-vector/woman-man-holding-coffee-while-look-phone-check-social-media_10045-652.jpg"
+              class="img-fluid" alt="">
           </div>
         </div><!-- Features Item -->
 
         <div class="tablet row gy-4 align-items-stretch justify-content-between features-item " id="tablet">
           <div class="col-lg-5 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="https://cdn1.vectorstock.com/i/1000x1000/59/05/woman-showing-tablet-vector-21615905.jpg" class="img-fluid" alt="">
+            <img src="https://cdn1.vectorstock.com/i/1000x1000/59/05/woman-showing-tablet-vector-21615905.jpg"
+              class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Tablets</h3>
@@ -224,7 +236,7 @@
         </div><!-- Features Item -->
 
         <div class="row gy-4 align-items-stretch justify-content-between features-item " id="laptop">
-          
+
           <div class="col-lg-4 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Laptops</h3>
             <p>You can compare and find the best option available for you in the range of our wide
@@ -232,7 +244,9 @@
             <a href="laptop.html" class="btn btn-get-started align-self-start">Explore</a>
           </div>
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="https://img.freepik.com/premium-vector/set-people-are-using-laptop-vector-illustration_7087-474.jpg" class="img-fluid" alt="">
+            <img
+              src="https://img.freepik.com/premium-vector/set-people-are-using-laptop-vector-illustration_7087-474.jpg"
+              class="img-fluid" alt="">
             <!-- <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3bdd0f99-41ef-4604-9548-5fd96b99ac9b/dftoip3-b272251c-30f4-4fb9-b243-1f31adaf931e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzNiZGQwZjk5LTQxZWYtNDYwNC05NTQ4LTVmZDk2Yjk5YWM5YlwvZGZ0b2lwMy1iMjcyMjUxYy0zMGY0LTRmYjktYjI0My0xZjMxYWRhZjkzMWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VVqmysOUekrRzvkaL2z4KJVh2fNEwFMpy0svZ8qnFRo" class="img-fluid" alt=""> -->
           </div>
         </div><!-- Features Item -->
@@ -240,13 +254,15 @@
         <div class="row gy-4 align-items-stretch justify-content-between features-item " id="audio">
           <div class="col-lg-4  align-items-center features-img-bg" data-aos="zoom-out">
             <!-- <img src="assets/img/audio.png" class="img-fluid" alt=""> -->
-            <img src="https://img.freepik.com/premium-vector/cartoon-drawing-woman-with-large-headphones_147933-4902.jpg" class="img-fluid" alt="">
+            <img
+              src="https://img.freepik.com/premium-vector/cartoon-drawing-woman-with-large-headphones_147933-4902.jpg"
+              class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Audio Products</h3>
             <p> We can help you choose the best Audio Product to match your vibe, you can choose from brands like
               JBL, Sony, Boat, Marshal, and many more.
-             <br>We got you all covered :)
+              <br>We got you all covered :)
             </p>
             <ul>
               <li><i class="bi bi-check"></i> <span>Headphone</span></li>
@@ -262,81 +278,81 @@
 
     </section><!-- End Features Section -->
 
-        <!-- Pricing Section - Home Page -->
-        <section id="pricing" class="pricing">
+    <!-- Pricing Section - Home Page -->
+    <section id="pricing" class="pricing">
 
-          <!--  Section Title -->
-          <div class="container section-title" data-aos="fade-up">
-            <h2>Pricing</h2>
-            <p>Streamline your experience effortlessly - unlock the full potential with our Premium Subscriptions.</p>
-          </div><!-- End Section Title -->
-    
-          <div class="container" data-aos="zoom-in" data-aos-delay="100">
-    
-            <div class="row g-4">
-    
-              <div class="col-lg-4">
-                <div class="pricing-item">
-                  <h3>Free Plan</h3>
-                  <div class="icon">
-                    <i class="bi bi-box"></i>
-                  </div>
-                  <h4><sup>₹</sup>0<span> / month</span></h4>
-                  <ul>
-                    <li><i class="bi bi-check"></i> <span>Advanced Search Bar</span></li>
-                    <li><i class="bi bi-check"></i> <span>Interactive Chatbot</span></li>
-                    <li><i class="bi bi-check"></i> <span>Manual Visiting</span></li>
-                    <li class="na"><i class="bi bi-x"></i> <span>Expert Advise</span></li>
-                    <li class="na"><i class="bi bi-x"></i> <span>Support till the end of the search</span></li>
-                  </ul>
-                  <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-                </div>
-              </div><!-- End Pricing Item -->
-    
-              <div class="col-lg-4">
-                <div class="pricing-item featured">
-                  <h3>Expert Help</h3>
-                  <div class="icon">
-                    <i class="bi bi-rocket"></i>
-                  </div>
-    
-                  <h4><sup>₹</sup>100<span> / month</span></h4>
-                  <ul>
-                    <li><i class="bi bi-check"></i> <span>Advanced Search Bar</span></li>
-                    <li><i class="bi bi-check"></i> <span>Interactive Chatbot</span></li>
-                    <li><i class="bi bi-check"></i> <span>Manual Visiting</span></li>
-                    <li><i class="bi bi-check"></i> <span>Expert Advise</span></li>
-                    <li><i class="bi bi-check"></i> <span>Support till the end of the search</span></li>
-                  </ul>
-                  <div class="text-center"><a href="./assets/supplements/checkout100.html" class="buy-btn">Buy Now</a></div>
-                </div>
-              </div><!-- End Pricing Item -->
-    
-              <div class="col-lg-4">
-                <div class="pricing-item">
-                  <h3>Developer Plan</h3>
-                  <div class="icon">
-                    <i class="bi bi-send"></i>
-                  </div>
-                  <h4><sup>₹</sup>200<span> / month</span></h4>
-                  <ul>
-                    <li><i class="bi bi-check"></i> <span>Advanced Search Bar</span></li>
-                    <li><i class="bi bi-check"></i> <span>Interactive Chatbot</span></li>
-                    <li><i class="bi bi-check"></i> <span>Manual Visiting</span></li>
-                    <li><i class="bi bi-check"></i> <span>Expert Advise from us</span></li>
-                    <li><i class="bi bi-check"></i> <span>Support till the end of the search</span></li>
-                    <li><i class="bi bi-check"></i> <span>Contribute with us</span></li>
-                    <li><i class="bi bi-check"></i> <span>Shout Outs</span></li>
-                  </ul>
-                  <div class="text-center"><a href="./assets/supplements/checkout200.html" class="buy-btn">Buy Now</a></div>
-                </div>
-              </div><!-- End Pricing Item -->
-    
+      <!--  Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Streamline your experience effortlessly - unlock the full potential with our Premium Subscriptions.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Free Plan</h3>
+              <div class="icon">
+                <i class="bi bi-box"></i>
+              </div>
+              <h4><sup>₹</sup>0<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Advanced Search Bar</span></li>
+                <li><i class="bi bi-check"></i> <span>Interactive Chatbot</span></li>
+                <li><i class="bi bi-check"></i> <span>Manual Visiting</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Expert Advise</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Support till the end of the search</span></li>
+              </ul>
+              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
             </div>
-    
-          </div>
-    
-        </section><!-- End Pricing Section -->
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item featured">
+              <h3>Expert Help</h3>
+              <div class="icon">
+                <i class="bi bi-rocket"></i>
+              </div>
+
+              <h4><sup>₹</sup>100<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Advanced Search Bar</span></li>
+                <li><i class="bi bi-check"></i> <span>Interactive Chatbot</span></li>
+                <li><i class="bi bi-check"></i> <span>Manual Visiting</span></li>
+                <li><i class="bi bi-check"></i> <span>Expert Advise</span></li>
+                <li><i class="bi bi-check"></i> <span>Support till the end of the search</span></li>
+              </ul>
+              <div class="text-center"><a href="./assets/supplements/checkout100.html" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>Developer Plan</h3>
+              <div class="icon">
+                <i class="bi bi-send"></i>
+              </div>
+              <h4><sup>₹</sup>200<span> / month</span></h4>
+              <ul>
+                <li><i class="bi bi-check"></i> <span>Advanced Search Bar</span></li>
+                <li><i class="bi bi-check"></i> <span>Interactive Chatbot</span></li>
+                <li><i class="bi bi-check"></i> <span>Manual Visiting</span></li>
+                <li><i class="bi bi-check"></i> <span>Expert Advise from us</span></li>
+                <li><i class="bi bi-check"></i> <span>Support till the end of the search</span></li>
+                <li><i class="bi bi-check"></i> <span>Contribute with us</span></li>
+                <li><i class="bi bi-check"></i> <span>Shout Outs</span></li>
+              </ul>
+              <div class="text-center"><a href="./assets/supplements/checkout200.html" class="buy-btn">Buy Now</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- End Pricing Section -->
 
     <!-- Testimonials Section - Home Page -->
     <section id="testimonials" class="testimonials">
@@ -375,18 +391,22 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                      <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img flex-shrink-0"
+                        alt="">
                       <div>
                         <h3>Yashvant Yadav</h3>
                         <h4>Android Developer</h4>
                         <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
                       </div>
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>PickZ made my gadget hunt a breeze! The personalized recommendations helped me find the perfect laptop within my budget. The expert advice section was a game-changer. Thanks, PickZ!</span>
+                      <span>PickZ made my gadget hunt a breeze! The personalized recommendations helped me find the
+                        perfect laptop within my budget. The expert advice section was a game-changer. Thanks,
+                        PickZ!</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -395,18 +415,22 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                      <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img flex-shrink-0"
+                        alt="">
                       <div>
                         <h3>Nandani Bansal</h3>
                         <h4>ML Enthusiast</h4>
                         <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
                       </div>
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>As a tech enthusiast, I'm always on the lookout for the latest gadgets. PickZ not only simplified my search but also introduced me to some hidden gems in the tech world. A must-visit for every tech geek!</span>
+                      <span>As a tech enthusiast, I'm always on the lookout for the latest gadgets. PickZ not only
+                        simplified my search but also introduced me to some hidden gems in the tech world. A must-visit
+                        for every tech geek!</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -415,18 +439,22 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                      <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img flex-shrink-0"
+                        alt="">
                       <div>
                         <h3>Shivangi</h3>
                         <h4>NEET Aspirant</h4>
                         <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
                       </div>
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>PickZ exceeded my expectations! Not only did it help me stay within budget, but the detailed reviews and expert insights gave me the confidence to make an informed decision. Five stars!</span>
+                      <span>PickZ exceeded my expectations! Not only did it help me stay within budget, but the detailed
+                        reviews and expert insights gave me the confidence to make an informed decision. Five
+                        stars!</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -435,18 +463,22 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                      <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img flex-shrink-0"
+                        alt="">
                       <div>
                         <h3>Himanshu Prajapati</h3>
                         <h4>Mechanical Engineer</h4>
                         <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
                       </div>
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>PickZ is my go-to for all things tech. The comprehensive guides and expert opinions make it easy for someone like me, who's always seeking the best tech solutions. Highly recommended!</span>
+                      <span>PickZ is my go-to for all things tech. The comprehensive guides and expert opinions make it
+                        easy for someone like me, who's always seeking the best tech solutions. Highly
+                        recommended!</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -455,18 +487,22 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <div class="d-flex">
-                      <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img flex-shrink-0" alt="">
+                      <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img flex-shrink-0"
+                        alt="">
                       <div>
                         <h3>Aditya Sharma</h3>
                         <h4>IOT Expert</h4>
                         <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
                       </div>
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>PickZ is a lifesaver for busy professionals like me. I needed a new smartphone fast, and PickZ quick suggestions based on my needs and budget saved me hours of research. Kudos to the team!</span>
+                      <span>PickZ is a lifesaver for busy professionals like me. I needed a new smartphone fast, and
+                        PickZ quick suggestions based on my needs and budget saved me hours of research. Kudos to the
+                        team!</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -484,77 +520,86 @@
 
     </section><!-- End Testimonials Section -->
 
-        <!-- Faq Section - Home Page -->
-        <section id="faq" class="faq">
+    <!-- Faq Section - Home Page -->
+    <section id="faq" class="faq">
 
-          <div class="container">
-    
-            <div class="row gy-4">
-    
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="content px-xl-5">
-                  <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-                  <p>
-                    We have answered the most common questions but if you have any other questions you can get in touch with us through the contact form below.
-                  </p>
-                </div>
-              </div>
-    
-              <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-    
-                <div class="faq-container">
-                  <div class="faq-item faq-active">
-                    <h3><span class="num">1.</span> <span>How does your website help me find the right tech product?
-                    </span></h3>
-                    <div class="faq-content">
-                      <p>Our website utilizes advanced algorithms to analyze your budget, preferences, and needs. We then provide personalized recommendations based on expert reviews and user feedback.</p>
-                    </div>
-                    <i class="faq-toggle bi bi-chevron-right"></i>
-                  </div><!-- End Faq item-->
-    
-                  <div class="faq-item">
-                    <h3><span class="num">2.</span> <span>Are the product recommendations unbiased?</span></h3>
-                    <div class="faq-content">
-                      <p>Absolutely. Our recommendations are solely based on your input, budget constraints, and the expertise of our team. We don't promote any specific brands or products for financial gain.</p>
-                    </div>
-                    <i class="faq-toggle bi bi-chevron-right"></i>
-                  </div><!-- End Faq item-->
-    
-                  <div class="faq-item">
-                    <h3><span class="num">3.</span> <span>How do I submit my preferences to receive personalized recommendations?
-                    </span></h3>
-                    <div class="faq-content">
-                      <p>It's easy! Simply navigate to our homepage, answer a few quick questions about your budget, preferences, and requirements. Our system will then generate a tailored list of tech products that match your criteria.</p>
-                    </div>
-                    <i class="faq-toggle bi bi-chevron-right"></i>
-                  </div><!-- End Faq item-->
-    
-                  <div class="faq-item">
-                    <h3><span class="num">4.</span> <span>Do you consider the latest tech trends in your recommendations?
-                    </span></h3>
-                    <div class="faq-content">
-                      <p>Absolutely. Our system is designed to stay updated with the latest tech trends. We take into account the newest releases, customer reviews, and expert insights to ensure our recommendations reflect the current market landscape.</p>
-                    </div>
-                    <i class="faq-toggle bi bi-chevron-right"></i>
-                  </div><!-- End Faq item-->
-    
-                  <div class="faq-item">
-                    <h3><span class="num">5.</span> <span>Can I trust the expert advice provided on your platform?
-                    </span></h3>
-                    <div class="faq-content">
-                      <p>Yes, our team comprises tech enthusiasts and experts who thoroughly research and evaluate products. Their recommendations are unbiased and tailored to help you make informed decisions.</p>
-                    </div>
-                    <i class="faq-toggle bi bi-chevron-right"></i>
-                  </div><!-- End Faq item-->
-    
-                </div>
-    
-              </div>
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="content px-xl-5">
+              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+              <p>
+                We have answered the most common questions but if you have any other questions you can get in touch with
+                us through the contact form below.
+              </p>
             </div>
-    
           </div>
-    
-        </section><!-- End Faq Section -->
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="faq-container">
+              <div class="faq-item faq-active">
+                <h3><span class="num">1.</span> <span>How does your website help me find the right tech product?
+                  </span></h3>
+                <div class="faq-content">
+                  <p>Our website utilizes advanced algorithms to analyze your budget, preferences, and needs. We then
+                    provide personalized recommendations based on expert reviews and user feedback.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">2.</span> <span>Are the product recommendations unbiased?</span></h3>
+                <div class="faq-content">
+                  <p>Absolutely. Our recommendations are solely based on your input, budget constraints, and the
+                    expertise of our team. We don't promote any specific brands or products for financial gain.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">3.</span> <span>How do I submit my preferences to receive personalized
+                    recommendations?
+                  </span></h3>
+                <div class="faq-content">
+                  <p>It's easy! Simply navigate to our homepage, answer a few quick questions about your budget,
+                    preferences, and requirements. Our system will then generate a tailored list of tech products that
+                    match your criteria.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">4.</span> <span>Do you consider the latest tech trends in your recommendations?
+                  </span></h3>
+                <div class="faq-content">
+                  <p>Absolutely. Our system is designed to stay updated with the latest tech trends. We take into
+                    account the newest releases, customer reviews, and expert insights to ensure our recommendations
+                    reflect the current market landscape.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">5.</span> <span>Can I trust the expert advice provided on your platform?
+                  </span></h3>
+                <div class="faq-content">
+                  <p>Yes, our team comprises tech enthusiasts and experts who thoroughly research and evaluate products.
+                    Their recommendations are unbiased and tailored to help you make informed decisions.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- End Faq Section -->
 
     <!-- Team Section - Home Page -->
     <section id="team" class="team">
@@ -606,9 +651,10 @@
               <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
               <div class="social">
                 <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="bi bi-github"></i></a>
-                <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/akshat-srivastav-776415262/" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/AkshatSrivastav08" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://instagram.com/harsh._.akshat" target="_blank"><i class="bi bi-instagram"></i></a>
               </div>
             </div>
             <div class="member-info text-center">
@@ -623,7 +669,8 @@
               <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="">
               <div class="social">
                 <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/anshika-agarwal-6bb898277" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/anshika-agarwal-6bb898277" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
                 <a href="https://github.com/Anshika0504" target="_blank"><i class="bi bi-github"></i></a>
                 <a href="https://instagram.com/anshikaagarwal0405" target="_blank"><i class="bi bi-instagram"></i></a>
               </div>
@@ -656,9 +703,11 @@
               <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
               <div class="social">
                 <a href="https://twitter.com/daultani_gaurav" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/gaurav-daultani-933b56230/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/gaurav-daultani-933b56230/" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
                 <a href="https://github.com/gauravdaultani" target="_blank"><i class="bi bi-github"></i></a>
-                <a href="https://instagram.com/https://instagram.com/gaurav.daultani_27" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://instagram.com/https://instagram.com/gaurav.daultani_27" target="_blank"><i
+                    class="bi bi-instagram"></i></a>
               </div>
             </div>
             <div class="member-info text-center">
@@ -673,7 +722,8 @@
               <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
               <div class="social">
                 <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/ishika-717364252/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/ishika-717364252/" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
                 <a href="https://github.com/ishika-75" target="_blank"><i class="bi bi-github"></i></a>
                 <a href="https://instagram.com/ishika.io" target="_blank"><i class="bi bi-instagram"></i></a>
               </div>
@@ -683,7 +733,7 @@
               <span>PowerPoint Specialist & Designer</span>
               <!-- <p>Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit</p> -->
             </div>
-          </div> 
+          </div>
         </div>
 
       </div>
@@ -700,7 +750,8 @@
           <div class="col-xl-10">
             <div class="text-center">
               <h3>Call To Action</h3>
-              <p>What are you waiting for? Get started by telling your needs and we will suggest you the best product within your budget</p>
+              <p>What are you waiting for? Get started by telling your needs and we will suggest you the best product
+                within your budget</p>
               <a class="cta-btn" href="#">Call To Action</a>
             </div>
           </div>
@@ -766,7 +817,8 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="mailto:singhaayushker@gmail.com" method="post"  enctype="text/plain" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="mailto:singhaayushker@gmail.com" method="post" enctype="text/plain" class="php-email-form"
+              data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -803,46 +855,53 @@
 
     </section><!-- End Contact Section -->
 
-        <!-- Tech Stack - Home Page -->
-        <div class="container section-title p-0" data-aos="fade-up">
-          <h2>Tech Stack Used</h2>
+    <!-- Tech Stack - Home Page -->
+    <div class="container section-title p-0" data-aos="fade-up">
+      <h2>Tech Stack Used</h2>
+    </div>
+
+    <section id="clients" class="clients">
+
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+              class="img-fluid" alt="HTML">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+              class="img-fluid" alt="CSS">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+              class="img-fluid" alt="JS">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+              class="img-fluid" alt="Bootstrap">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" class="img-fluid"
+              alt="TailwindCSS">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" class="img-fluid" alt="Figma">
+          </div><!-- End Client Item -->
+
         </div>
 
-        <section id="clients" class="clients">
+      </div>
 
-          <div class="container-fluid" data-aos="fade-up">
-    
-            <div class="row gy-4">
-    
-              <div class="col-xl-2 col-md-3 col-6 client-logo">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" class="img-fluid" alt="HTML">
-              </div><!-- End Client Item -->
-    
-              <div class="col-xl-2 col-md-3 col-6 client-logo">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" class="img-fluid" alt="CSS">
-              </div><!-- End Client Item -->
-    
-              <div class="col-xl-2 col-md-3 col-6 client-logo">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" class="img-fluid" alt="JS">
-              </div><!-- End Client Item -->
-    
-              <div class="col-xl-2 col-md-3 col-6 client-logo">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" class="img-fluid" alt="Bootstrap">
-              </div><!-- End Client Item -->
-    
-              <div class="col-xl-2 col-md-3 col-6 client-logo">
-                <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" class="img-fluid" alt="TailwindCSS">
-              </div><!-- End Client Item -->
-    
-              <div class="col-xl-2 col-md-3 col-6 client-logo">
-                <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" class="img-fluid" alt="Figma">
-              </div><!-- End Client Item -->
-    
-            </div>
-    
-          </div>
-    
-        </section><!-- End Tech Stack Section -->
+    </section><!-- End Tech Stack Section -->
 
   </main>
 
@@ -901,14 +960,15 @@
     <div class="container copyright text-center mt-4">
       <p>&copy; <span>Copyright</span> <strong class="px-1">PickZ</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        Designed by <a href="https://github.com/aayushker" target="_blank" >Aayushker Singh</a>
+        Designed by <a href="https://github.com/aayushker" target="_blank">Aayushker Singh</a>
       </div>
     </div>
 
   </footer><!-- End Footer -->
 
   <!-- Scroll Top Button -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader">
@@ -918,10 +978,10 @@
     <div></div>
   </div>
 
-<!-- chatbot -->
-<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script>
-  window.botpressWebChat.init({
+  <!-- chatbot -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
       "composerPlaceholder": "Chat with PickZ",
       "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
       "botId": "69f03d93-47fb-4f42-b407-80c8e7e54ad9",
@@ -938,8 +998,8 @@
       "useSessionStorage": true,
       "theme": "prism",
       "themeColor": "#2563eb"
-  });
-</script>
+    });
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -948,10 +1008,10 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="./assets/js/autocomplete.js"></script>
 
 </body>
 

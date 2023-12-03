@@ -875,6 +875,42 @@ section {
   }
 }
 
+
+.result-box{
+  border-top: lpx solid #999;
+ 
+  
+  padding: 0px 10px;  
+  max-height:200px ;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.result-box::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+.result-box ul{
+  border-top: 1px solid #fb0000;
+  border-bottom: 1px solid #fb0000;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 15px 10px;
+  margin: 0;
+
+}
+
+.result-box ul li{
+  list-style: none;
+  border-radius: 3px;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.result-box ul li:hover{
+  background: #f0f5ff;
+}
+
 /* Clients Section - Home Page
 ------------------------------*/
 .clients {
