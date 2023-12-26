@@ -183,22 +183,22 @@ document.addEventListener("click", function(event) {
     }
 });
 
-// document.onkeydown = function(event) {
-//     // Handle backspace key
-//     if (event.key === 'Backspace') {
-//         inputBox.value = inputBox.value.slice(0, -1);
-//     }
-//     // Handle enter key
-//     else if (event.key === 'Enter') {
-//         event.preventDefault();
-//     }
-//     // Handle other keys
-//     else if (event.key.length === 1) {
-//         // Append the key that was pressed to the current value of the input box
-//         inputBox.value += event.key;
-//     }
+document.onkeydown = function(event) {
+    // Handle backspace key
+    if (event.key === 'Backspace') {
+        inputBox.value = inputBox.value.slice(0, -1);
+    }
+    // Handle enter key
+    else if (event.key === 'Enter') {
+        event.preventDefault();
+    }
+    // Handle other keys
+    else if (event.key.length === 1) {
+        // Append the key that was pressed to the current value of the input box
+        inputBox.value += event.key;
+    }
 
-//     // Trigger the keyup event on the input box
-//     var keyupEvent = new KeyboardEvent('keyup', { 'keyCode': event.keyCode });
-//     inputBox.dispatchEvent(keyupEvent);
-// };
+    // Trigger the keyup event on the input box
+    var keyupEvent = new KeyboardEvent('keyup', { 'keyCode': event.keyCode });
+    inputBox.dispatchEvent(keyupEvent);
+};
