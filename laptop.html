@@ -1,459 +1,1090 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Enter your description here" />
+  <title>Your Premium Mobile Experience</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #2c3e50; /* Dark background color for the page */
+      color: #fff; /* Light text color for the page */
+    }
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/Favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/Favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/Favicon/favicon-16x16.png">
-  <link rel="manifest" href="/assets/Favicon/site.webmanifest">
+    /* Custom styles for the full-width Jumbotron */
+    .jumbotron {
+      background: linear-gradient(45deg, #2c3e50, #34495e), url('path/to/your/textured-image.png'); /* Gradient background with textured overlay */
+      color: #fff; /* Text color on the Jumbotron */
+      padding: 150px 0; /* Increased height for the Jumbotron */
+      border-radius: 0; /* No border-radius for full-width */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      width: 100%; /* Full width */
+      margin: 0; /* Remove default margin */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+    }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="/assets/css/main.css">
+    .jumbotron::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); /* Textured overlay to enhance the mobile phone feel */
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <!-- <link href="/assets/vendor/aos/aos.css" rel="stylesheet"> -->
+    /* Custom styles for the components within the Jumbotron */
+    .jumbotron h1,
+    .jumbotron p {
+      transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="/assets/css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/laptop.css">
+    .jumbotron h1 {
+      font-size: 3.5rem; /* Larger font size for the main title */
+      font-weight: bold;
+      line-height: 1.2; /* Improved line height for better readability */
+    }
 
-  <title>PickZ - Laptops</title>
+    .jumbotron p {
+      font-size: 1.5rem; /* Larger font size for the description */
+      font-weight: 300; /* Lighter font weight for the description */
+      line-height: 1.5; /* Improved line height for better readability */
+    }
 
+    /* Custom styles for the lines */
+    .line {
+      height: 1px; /* Height of the line */
+      width: 50%; /* Width of the line */
+      background-color: #f39c12; /* Color of the line */
+      margin: 20px 0; /* Spacing above and below the line */
+    }
+
+    /* Custom styles for the brand sections */
+    .brand-section {
+      padding: 80px 0; /* Adjusted padding for each brand section */
+    }
+
+    /* Custom styles for the cards within each brand section */
+    .card {
+      background-color: #34495e; /* Dark background color for the cards */
+      color: #fff; /* Light text color for the cards */
+      border: none; /* No border for the cards */
+      border-radius: 0; /* No border-radius for the cards */
+      margin-bottom: 30px; /* Spacing between cards */
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .card:hover .carousel-inner {
+      transform: translateX(0); /* Show the full width of the carousel on hover */
+    }
+
+    .card-img-top {
+      border-bottom: 1px solid #2c3e50; /* Border at the bottom of the card image */
+    }
+
+    .card-title {
+      font-weight: bold; /* Bold font for the card title */
+    }
+
+    .card-text {
+      font-size: 1.2rem; /* Font size for the card text */
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      width: 100%; /* Full width for each carousel item */
+      flex: 0 0 auto;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .tooltip-inner {
+      background-color: #333; /* Tooltip background color */
+    }
+
+    .tooltip.bs-tooltip-top .tooltip-arrow::before {
+      border-top-color: #333; /* Tooltip arrow color for top placement */
+    }
+
+    .tooltip.bs-tooltip-right .tooltip-arrow::before {
+      border-right-color: #333; /* Tooltip arrow color for right placement */
+    }
+
+    .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+      border-bottom-color: #333; /* Tooltip arrow color for bottom placement */
+    }
+
+    .tooltip.bs-tooltip-left .tooltip-arrow::before {
+      border-left-color: #333; /* Tooltip arrow color for left placement */
+    }
+  </style>
 </head>
-
 <body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>PickZ</h1>
-        <span>.</span>
-      </a>
-
-      <!-- Nav Menu -->
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#features">Lineup</a></li>
-          <li><a href="index.html#team">Team</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-      <!-- End Nav Menu -->
-
-      <!-- <a class="btn-getstarted" href="index.html#features">Get Started</a> -->
-      <a href="index.html#features"></a>
-    </div>
-  </header>
-  <!-- End Header -->
-
-  <br><br>
-  <br><br>
-  <br><br>
-  <div>
-    <h1>Under Development!!!</h1>
-  </div>
-  </div>
-  <div class="asus"><br>
-    <h1 class="asush">Asus</h1>
-    <img class="asusimg"
-      src="https://dlcdnwebimgs.asus.com/files/media/3a7833f4-1d17-4aed-baf6-1a513b9c6654/v1/features/images/large/1x/s1/main.jpg"
-      alt="">
-
-    <img class="asusimg"
-      src="https://www.asus.com/WebsitesBanner/global/banners/ikpbysqako8sa6gb/ikpbysqako8sa6gb-1_0_desktop_0_1X.webp?webp"
-      alt="https://www.asus.com/WebsitesBanner/global/banners/ikpbysqako8sa6gb/ikpbysqako8sa6gb-0_0_desktop_1_1X.webp?webp">
-    <img class="asusimg"
-      src="https://www.asus.com/WebsitesBanner/global/banners/ikpbysqako8sa6gb/ikpbysqako8sa6gb-0_0_desktop_1_1X.webp?webp"
-      alt="">
-    <img class="asusimg"
-      src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/r/e/f/-original-imagrgprbhchwgve.jpeg?q=70"
-      alt="">
-  </div>
-  <div class="asusproduct">
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/416/416/koad9jk0/computer/g/m/j/na-gaming-laptop-asus-original-imag2s5nf2wgh4hz.jpeg?q=70"
-        class="asusimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">For your day to day work all u need is asus ROG Flow.</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/u/h/s/-original-imagpxgqj6x2zkhe.jpeg?q=70"
-        class="asusimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">Are u a student? Then what are u waiting for</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/h/k/x/-original-imagtvq8w2nsamdh.jpeg?q=70"
-        class="asusimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">We are here,to enhance your gaming experience.</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/x/m/f/-original-imagtucmuhjq4yep.jpeg?q=70"
-        class="asusimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">This laptop is for tech enthuthiast</p>
-      </div>
-    </div>
-
+  <!-- Full-width Jumbotron -->
+  <div class="jumbotron text-center">
+    <h1 class="display-2">Elevate Your Mobile Experience</h1>
+    <p class="lead">Crafting excellence in every pixel. Transform your digital presence with innovation.</p>
+    <div class="line mx-auto"></div> <!-- Centered line -->
+    <p>Unleash the potential of your ideas through a captivating mobile journey. Embrace success with a professional touch.</p>
   </div>
 
+  <!-- Brand Section 1: Lenovo -->
+  <section class="brand-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Lenovo</h2>
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/m/u/p/-original-imagu3kmnhbskzq7.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/w/a/b/-original-imagtdwbsce8utz9.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/d/c/o/-original-imagtdwbbfdhhst7.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/g/s/e/-original-imagtdwbaqvqkdv5.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Add more carousel items for Samsung as needed -->
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">IdeaPad Slim 5i 13th Gen (14, Intel)
+              </h5>
+              <p class="card-text">Smart, slim, light, & military-grade 35.56cms (14) laptop
 
-  <div class="lenovo"><br>
-    <h1 class="lenovoh">Lenovo</h1>
-    <img class="lenovoimg"
-      src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/q/i/-original-imagtvudqkkuvhsh.jpeg?q=70">
-
-    <img class="lenovoimg"
-      src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/d/t/c/v15-g2-alc-laptop-lenovo-original-imaghq2ffspmtfuh.jpeg?q=70"
-      alt="https://www.asus.com/WebsitesBanner/global/banners/ikpbysqako8sa6gb/ikpbysqako8sa6gb-0_0_desktop_1_1X.webp?webp">
-    <img class="lenovoimg"
-      src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/7/3/c/-original-imagtzwvygkwvbex.jpeg?q=70"
-      alt="">
-    <img class="lenovoimg"
-      src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/v/f/p/-original-imags5e9dgcegjfq.jpeg?q=70"
-      alt="">
-  </div>
-  <div class="lenovoproduct">
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/312/312/xif0q/screen-guard/screen-guard/4/b/d/asg-14715-saco-original-imaghqbah9jycshw.jpeg?q=70"
-        class="lenovoimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">Lenovo Lenovo V15 Celeron Dual Core 4th Gen - (8 GB/256 GB SSD/Windows 11 Home) 82QYA00MIN
-          Laptop (15.6 inch, Alc Balck)</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/b/g/f/-original-imagufyhvwswufvm.jpeg?q=70"
-        class="lenovoimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">Lenovo IdeaPad Gaming 3 Ryzen 5 Hexa Core 5500H - (8 GB/512 GB SSD/Windows 11 Home/4 GB
-          Graphics/NVIDIA GeForce RTX 2050) 15ACH6 Gaming Laptop (39.62 cm, Shadow Black, 2.25 Kg)</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/1/w/5/-original-imagrjfhefuhkppa.jpeg?q=70"
-        class="lenovoimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">Lenovo ThinkBook 15 Ryzen 7 Octa Core 7730U - (8 GB/512 GB SSD/DOS) ThinkBook 15 G5 Thin and
-          Light Laptop (15.6 Inch, Mineral Grey, 1.7 Kg)</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/q/u/l/lenovo-business-laptop-lenovo-original-imagqrhg3h2wvhpz.jpeg?q=70"
-        class="lenovoimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">Lenovo S14 Core i5 12th Gen 1235U - (8 GB/512 GB SSD/Windows 11 Pro) S14 GEN-3 Business Laptop
-          (14 inch, Iron Grey, 1.5 kg, With MS Office)</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="dell"><br>
-    <h1 class="dellh">dell</h1>
-    <img class="dellimg1"
-      src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/category-pages/latam/dv7620nt-cnb-05000ff090-nonfpr-bk.png?$S7-png$&wid=800&hei=550&qlt=100,0&resMode=sharp2">
-
-    <img class="dellimg"
-      src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/franchise/xps/prod-2011-tablet-xps-13-9315-blue-folio-800x550.png?fmt=png-alpha&wid=800&hei=550"
-      alt="https://www.asus.com/WebsitesBanner/global/banners/ikpbysqako8sa6gb/ikpbysqako8sa6gb-0_0_desktop_1_1X.webp?webp">
-    <img class="dellimg"
-      src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/category/laptop/emea-na-au-nz-my-sg-in-ph-id-vn-jp-kr-vostro-5630-with-fpr-lf-800x620.png?fmt=png-alpha&wid=800&hei=620"
-      alt="">
-    <img class="dellimg"
-      src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/category-pages/cs2303g0008-607872-gl-cs-co-site-banner-aw-mseries-family-800x620-left.png?fmt=png-alpha&wid=800&hei=620"
-      alt="">
-  </div>
-  <div class="dellproduct">
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/312/312/ko8xtow0/computer/j/q/r/na-thin-and-light-laptop-dell-original-imag2qm3x6zhexrf.jpeg?q=70"
-        class="lenovoimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">DELL Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) New Inspiron 15 Laptop Thin and
-          Light Laptop (15.6 Inch, Platinum Silver, 1.65 Kg, With MS Office)</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/e/e/a/inspiron-3530-thin-and-light-laptop-dell-original-imagte3fnfceuuk4.jpeg?q=70"
-        class="lenovoimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">DELL Inspiron 3530 Core i3 13th Gen 1305U - (8 GB/1 TB SSD/Windows 11 Home) Inspiron 3530 Thin
-          and Light Laptop (15.6 Inch, Silver, 1.65 Kg, With MS Office)</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/v/5/a/-original-imagzyfzrvzzseb9.jpeg?q=70"
-        class="lenovoimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">DELL Inspiron Core i5 11th Gen 1135G7 - (8 GB/512 GB SSD/Windows 11 Home) New Inspiron 15 3000
-          Thin and Light Laptop (15.6 Inch, Platinum Silver, 1.8 Kg, With MS Office)</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/r/c/inspiron-3511-laptop-dell-original-imagssnmgcmchhj4.jpeg?q=70"
-        class="lenovoimg2" alt="...">
-      <div class="card-body">
-        <p class="pasus">DELL Inspiron 3511 Core i5 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) IN35117W5CCS01ORB1
-          Laptop (15.6 inch, Carbon Black, With MS Office)</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="apple"><br>
-    <h1 class="appleh">Apple</h1>
-    <img class="appleimg"
-      src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/2/v/v/-original-imagfdeqter4sj2j.jpeg?q=70"
-      alt="">
-
-    <img class="appleimg"
-      src="https://rukminim2.flixcart.com/image/312/312/khdqnbk0/computer/f/y/t/apple-original-imafxfyqydgvrkzv.jpeg?q=70"
-      alt="https://www.asus.com/WebsitesBanner/global/banners/ikpbysqako8sa6gb/ikpbysqako8sa6gb-0_0_desktop_1_1X.webp?webp">
-    <img class="appleimg"
-      src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/y/i/y/mphg3hn-a-thin-and-light-laptop-apple-original-imagmfhepavqyfyy.jpeg?q=70"
-      alt="">
-    <img class="appleimg"
-      src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/p/b/a/-original-imaguw3hkarh3jft.jpeg?q=70"
-      alt="">
-  </div>
-  <div class="appleproduct">
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/312/312/khdqnbk0/computer/e/6/n/apple-original-imafxfyq4agsgysn.jpeg?q=70"
-        class="appleimg" alt="...">
-      <div class="card-body">
-        <p class="pasus">APPLE 2020 Macbook Pro M1 - (8 GB/512 GB SSD/Mac OS Big Sur) MYD92HN/A (13.3 inch, Space Grey,
-          1.4 kg)</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/312/312/kuyf8nk0/computer/g/z/q/mk1e3hn-a-laptop-apple-original-imag7yzmv57cvg3f.jpeg?q=70"
-        class="appleimg" alt="...">
-      <div class="card-body">
-        <p class="pasus">APPLE 2021 Macbook Pro M1 Pro - (16 GB/1 TB SSD/Mac OS Monterey) MK1F3HN/A (16.2 inch, Silver,
-          2.1 kg)</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/312/312/jyq5oy80/computer/t/y/2/apple-na-thin-and-light-laptop-original-imafgwev6abfznds.jpeg?q=70"
-        class="appleimg" alt="...">
-      <div class="card-body">
-        <p class="pasus">APPLE MacBook Pro Core i5 8th Gen - (8 GB/512 GB SSD/Mac OS Mojave) MV972HN/A (13.3 inch, Space
-          Grey, 1.37 kg)
-        </p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/y/8/m/macbook-air-thin-and-light-laptop-apple-original-imagqaphwbzpgjzr.jpeg?q=70"
-        class="appleimg" alt="...">
-      <div class="card-body">
-        <p class="pasus">APPLE 2023 Macbook Air M2 - (8 GB/512 GB SSD/macOS Ventura) MQKQ3HN/A (15.3 Inch, Space Grey,
-          1.51 Kg)</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="hp"><br>
-    <h1 class="hph">hp</h1>
-    <img class="hpimg"
-      src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/2/v/v/-original-imagfdeqter4sj2j.jpeg?q=70"
-      alt="">
-
-    <img class="hpimg"
-      src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/2/m/e/-original-imagkqwzw9cdvgj2.jpeg?q=70"
-      alt="">
-    <img class="hpimg"
-      src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/c/u/a/255-g8-notebook-hp-original-imagjhbj4jf3pjdy.jpeg?q=70"
-      alt="">
-    <img class="hpimg"
-      src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/p/e/e/-original-imagrgm4ksqy2cg7.jpeg?q=70"
-      alt="">
-  </div>
-  <div class="hpproduct">
-    <div class="card" style="width: 18rem;">
-      <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/y/l/e/-original-imagp8xz5bfrpzvz.jpeg?q=70"
-        class="hpimg" alt="...">
-      <div class="card-body">
-        <p class="pasus">HP 15s Intel Core i5 12th Gen 1235U - (16 GB/512 GB SSD/Windows 11 Home) 15s-fq5112TU Thin and
-          Light Laptop (15.6 inch, Jet Black, 1.69 Kg, With MS Office)</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/b/x/o/15-eg2091t-thin-and-light-laptop-hp-original-imagmf9fvrzr8y4d.jpeg?q=70"
-        class="hpimg" alt="...">
-      <div class="card-body">
-        <p class="pasus">HP Pavilion (2023) Intel Core i7 13th Gen 1360P - (16 GB/1 TB SSD/Windows 11 Home) 15-eg3036TU
-          Thin and Light Laptop (15.6 Inch, Natural Silver, 1.75 Kg, With MS Office)</p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/o/o/i/15s-fq5202tu-thin-and-light-laptop-hp-original-imagsjtqwfgr9ffn.jpeg?q=70"
-        class="hpimg" alt="...">
-      <div class="card-body">
-        <p class="pasus">HP 15s Core i5 12th Gen - (8 GB/512 GB SSD/Windows 11 Home) 15S-FQ5202TU Thin and Light Laptop
-          (15.6 inch, Silver, With MS Office)
-        </p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/y/b/m/14-ek0137tu-thin-and-light-laptop-hp-original-imaghqbze3zrxx6t.jpeg?q=70"
-        class="hpimg" alt="...">
-      <div class="card-body">
-        <p class="pasus">HP Pavilion x360 Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) 14-ek0137TU Thin
-          and Light Laptop (14 Inch, Natural Silver, 1.41 Kg, With MS Office)</p>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="/index.html" class="logo d-flex align-items-center">
-            <span>PickZ</span>
-          </a>
-          <p>Providing solutions to every individual.</p>
-          <div class="social-links d-flex mt-4">
-            <a href="https://twitter.com/aayushker"><i class="bi bi-twitter"></i></a>
-            <a href="https://github.com/aayushker/"><i class="bi bi-github"></i></a>
-            <a href="https://instagram.com/aayushkers"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/aayushker/"><i class="bi bi-linkedin"></i></a>
+                Powered by 13th Gen Intel® Core™ processor
+                
+                Real-time system responsiveness via Lenovo AI Engine
+                
+                Optional fingerprint reader & hybrid FHD infrared camera
+                </p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html#about">About us</a></li>
-            <li><a href="/index.html#team">Know us</a></li>
-            <li><a href="/assets/supplements/t&c.html">Terms & Conditions</a></li>
-            <li><a href="/assets/supplements/privacypolicy.html">Privacy policy</a></li>
-          </ul>
+        <!-- Card 2 -->
+        <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/b/d/i/-original-imagzhefhc84rmbf.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/i/z/6/-original-imagzhefg3yfphng.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/s/q/z/-original-imagzhefwzqqdnbb.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/l/r/d/-original-imagufyhn6mrrmrj.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Add more carousel items for Samsung as needed -->
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Lenovo V15 AMD Ryzen 5 Hexa Core 5500U </h5>
+              <p class="card-text">8 GB/512 GB SSD/Windows 11 Home V15 G2 ALC Thin and Light Laptop 15.6 Inch, Black, 1.7 Kg</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
         </div>
+         <!-- Card 3  -->
+         <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                 <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/n/n/q/-original-imagu3kmvtfdy5hk.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/c/w/n/gaming-3-gaming-laptop-lenovo-original-imaghtkr78nzdzm8.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/l/f/m/gaming-3-gaming-laptop-lenovo-original-imaghtkrz5zzrvkh.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/61iA3wAvJwL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>  -->
+                <!-- Add more carousel items for Samsung as needed -->
+               </div> 
+             </div>
+            <div class="card-body">
+              <h5 class="card-title">IdeaPad Slim 3 Gen 6 (15, AMD)
+              </h5>
+              <p class="card-text">Learn from home and beyond with the IdeaPad 3 Gen 6 (15, AMD) laptop.
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="/index.html#phone">Phone</a></li>
-            <li><a href="/index.html#tablet">Tablet</a></li>
-            <li><a href="/index.html#laptop">Laptop</a></li>
-            <li><a href="/index.html#audio">Audio Products</a></li>
-            <!-- <li><a href="#features">Graphic Design</a></li> -->
-          </ul>
+                It balances the performance of AMD Ryzen™ 5000 H-Series processors with workflow-improving smart features.
+                
+                All this while keeping your system cool and quiet via intelligent thermals and a vivid 39.62cms (15.6) FHD display with razor-thin bezels.
+                
+                </p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+        <!-- Card 1 -->
+        <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Carousel Item 1 -->
+                 <!-- <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/t/o/b/galaxy-flip5-sm-f731blgains-samsung-original-imagru5pcagms7me.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/9/z/x/14alc7-thin-and-light-laptop-lenovo-original-imaggujjhgppfkfg.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>  
+                 <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/a/d/v/14alc7-thin-and-light-laptop-lenovo-original-imaggujjugfcsuhy.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                  <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/z/e/9/14alc7-thin-and-light-laptop-lenovo-original-imaggujjhq5zsvvm.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Add more carousel items for Samsung as needed -->
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">IdeaPad Flex 5 Gen 7 (14, AMD)
+              </h5>
+               <p class="card-text">Powered by up to AMD Ryzen™ 7 Mobile Processors for fast, reliable performance
+
+                Enjoy gorgeous visuals in up to 2.2K (2240 x 1400) resolution with 16:10 aspect ratio
+                
+                2-in-1 design lets you work and play flexibly in four modes—laptop, tablet, tent, or stand
+                
+                </p> 
+               <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>KIET Ghaziabad,</p>
-          <p>Muradnagar, UttarPradesh</p>
-          <p>India</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>1090</span></p>
-          <p><strong>Email:</strong> <span>aayushker.2226cseai1@kiet.edu</span></p>
-        </div>
-
+        <!-- Add more cards for Samsung as needed -->
       </div>
     </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>&copy; <span>Copyright</span> <strong class="px-1">PickZ</strong> <span>All Rights Reserved</span>
-      </p>
-      <div class="credits">
-        Designed by <a href="https://github.com/aayushker" target="_blank">Aayushker Singh</a>
-      </div>
+  </section>
+  <!-- Brand Section 1: DELL-->
+   <section class="brand-section">
+    <div class="container">
+      <h2 class="text-center mb-5">DELL</h2>
+      <div class="row"> 
+        <!-- Card 1 -->
+         <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                 <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/p/6/q/latitude-business-laptop-dell-original-imagzeyvgpbegkmw.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/m/2/l/latitude-business-laptop-dell-original-imagzeyvzxt5tdyj.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div> 
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/z/n/v/inspiron-3520-thin-and-light-laptop-dell-original-imagm5skpnwgkmuu.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/r/c/6/inspiron-3520-thin-and-light-laptop-dell-original-imagm5sk8ht85wwm.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Add more carousel items for apple as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">DELL Intel Core i3 11th Gen </h5> 
+               <p class="card-text">8 GB/256 GB SSD/32 GB EMMC Storage/Ubuntu Latitude 3420 Business Laptop 14 Inch, Black, 1.52 Kg</p> 
+               <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 2 -->
+         <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/9/g/9/inspiron-3520-laptop-dell-original-imagtegwwhwk9ghn.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/b/c/d/inspiron-laptop-dell-original-imagqz4qjugp7xz7.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://imgs.search.brave.com/LbPVWNx0G35eEOhfmY5KRHwhHmhkgQ-EDve_50AzU2E/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/YXBsdXMtbWVkaWEt/bGlicmFyeS1zZXJ2/aWNlLW1lZGlhLzEz/ODllOWY2LTU5NmUt/NDRhNy05ZTE1LWM1/MWIxODUwYjZlNi5f/X0NSMCwwLDk3MCw2/MDBfUFQwX1NYOTcw/X1YxX19fLmpwZw" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                 <div class="carousel-item active">
+                  <img src="https://imgs.search.brave.com/93EeQXh3cMwGe0RKk6jV-a6SB4zR7Z0BTi5BkbNbSds/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tdWRp/dGEuY29tLm5wL21l/ZGlhL2NhdGFsb2cv/cHJvZHVjdC9jYWNo/ZS8yNzhhYmJjODkx/MWVlNWJkOGQ5ZDM2/ZWY5MDRhODA1Zi92/L28vdm9zdHJvLTM1/MjAtbGFwdG9wLTAy/LmpwZw" class="d-block w-100" alt="Samsung Model 1">
+                </div>  
+                <!-- Add more carousel items for Samsung as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">DELL Inspiron 15 3520 Intel Core i5 12th Gen Core i5</h5>
+               <p class="card-text">16 GB/512 GB SSD/Windows 11 Home Inspiron 3520 Laptop 15.6 inch, Platinum Silver, 1.65 kg, With MS Office</p> 
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 3 -->
+         <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                 <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/k/a/s/essential-thin-and-light-laptop-dell-original-imagsszyxgbed8zc.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/p/h/1/inspiron-7430-thin-and-light-laptop-dell-original-imagt66ff5sgyywj.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/i/w/s/inspiron-laptop-dell-original-imagsyyjgayu4nhc.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/k/m/2/inspiron-laptop-dell-original-imagsbvtzx9zwfgt.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Add more carousel items for Samsung as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">DELL Intel Core i3 13th Gen </h5>
+              <p class="card-text">8 GB/1 TB SSD/Windows 11 Home IC7430XYW6F002ORS1 Thin and Light Laptop 14 inch, Platinum Silver, With MS Office.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+         <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                 <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/l45xea80/computer/m/q/7/vostro-3425-thin-and-light-laptop-dell-original-imagf4mth22ydgqs.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/2/e/o/inspiron-3520-laptop-dell-original-imagpc58nfqhp7gf.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/p/x/b/inspiron-3520-laptop-dell-original-imagpc58gfjdgq7j.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/f/f/b/vostro-3420-thin-and-light-laptop-dell-original-imagjhbkvb4cpzzt.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Add more carousel items for Samsung as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">DELL Vostro AMD Ryzen 5 Hexa Core 5625U</h5>
+              <p class="card-text">16 GB/512 GB SSD/Windows 11 Home Vostro 3425 Metal Thin and Light Laptop 14 Inch, Titan Grey Aluminium, 1.48 Kg, With MS Office</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 5 -->
+        <!-- <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> -->
+                <!-- Carousel Item 1 -->
+                <!-- <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/d/9/-original-imagtc2qzgnnuhxh.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Carousel Item 2 -->
+                <!-- <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/u/m/3/-original-imagtc5ffhbausfy.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/i/h/z/-original-imagtc5fbxefnjtj.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/e/g/k/-original-imagtc5f2k44dgax.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Add more carousel items for Samsung as needed -->
+              <!-- </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">I phone 15</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- Card 6 -->
+        <!-- <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> -->
+                <!-- Carousel Item 1 -->
+                <!-- <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/y/h/a/iphone-13-mini-mlk93hn-a-apple-original-imag6vp6thrzzcjg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Carousel Item 2 -->
+                <!-- <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/a/i/l/iphone-13-mini-mlk93hn-a-apple-original-imag6vp6x67yypzk.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/y/h/a/iphone-13-mini-mlk93hn-a-apple-original-imag6vp6thrzzcjg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/e/g/-original-imagh7g8k7ttcdkc.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Add more carousel items for Samsung as needed -->
+              <!-- </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">I phone 13 mini </h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- Add more cards for Samsung as needed -->
+      <!-- </div>
     </div>
+  </section> -->
+  <!-- Brand Section 1: Hp -->
+   <section class="brand-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Hp</h2>
+      <div class="row">
+        <!-- Card 1 -->
+         <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/8/i/j/-original-imagthcbgurdzwuc.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/j/q/x/-original-imagthcbb58yyja2.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <!-- <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/61GXMU1L5YL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/e/h/1/-original-imagwzhqzx3fzenf.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div>  -->
+                <!-- Add more carousel items for Samsung as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">HP Victus AMD Ryzen 5 Hexa Core 5600H </h5>
+              <p class="card-text">8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/AMD Radeon RX 6500M/60 Hz 15-fb0147AX Gaming Laptop  (15.6 Inch, Performance Blue, 2.37 Kg)</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 2 -->
+         <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                 <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/b/r/k/-original-imagsz5x5x3vkt8c.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/w/4/3/-original-imagg26ugndyzudk.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/v/i/0/-original-imagg26umtndqxct.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/9/s/-original-imags3bcyuexxmmx.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Add more carousel items for Samsung as needed -->
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">MSI GF63 Intel Core i5 11th Gen 112</h5>
+              <p class="card-text">8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce GTX 1650/60 Hz</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 3 -->
+         <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/3/1/9/-original-imagwzwbhjrsen82.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/m/v/i/-original-imagpecqf7vtkzfu.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/2/p/y/-original-imagwzwbcxay567z.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/3/7/x/-original-imagpecq94rne9zh.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Add more carousel items for Samsung as needed -->
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">HP Intel Intel Core i5 11th Gen 1155G7 </h5>
+              <p class="card-text">8 GB/512 GB SSD/Windows 11 Home 15s- fr4000TU Thin and Light Laptop 15.6 Inch, Natural Silver, 1.69 Kg, With MS Office</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 1 -->
+        <!-- <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> -->
+                <!-- Carousel Item 1 -->
+                 <!-- <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/41uLxtgZ7bL.SX300_SY300_QL70_FMwebp.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Carousel Item 2 -->
+                <!-- <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/41QeTDEBrfL.SY741.jpg" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/21ejKw-RH-L.SY741.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/21SYKUoaK6L.SY741.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Add more carousel items for Samsung as needed -->
+              <!-- </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Redmi Note 12 Pro+</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div>  -->
+        <!-- Card 5 -->
+         <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/b/r/k/-original-imagsz5x5x3vkt8c.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/w/4/3/-original-imagg26ugndyzudk.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/1/m/1/-original-imags9wbwzcv7hvx.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/3/g/w/-original-imagpz9ft9pjthbp.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Add more carousel items for Samsung as needed -->
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">MSI GF63 Intel Core i5 11th Gen 11260H </h5>
+              <p class="card-text">8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce GTX 1650/144 Hz</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <!-- <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> -->
+                <!-- Carousel Item 1 -->
+                <!-- <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/ky7lci80/mobile/e/j/x/-original-imagag2gatsxzcuv.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Carousel Item 2 -->
+                <!-- <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/ky1vl3k0/mobile/2/k/h/-original-imagadbyajtxpsgd.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
+                </div> -->
+                <!-- <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/kxz0pe80/mobile/a/q/x/-original-imagaaxkgrq48xzf.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/kxz0pe80/mobile/k/f/a/-original-imagaaxkzakbdf9g.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Add more carousel items for Samsung as needed -->
+              <!-- </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Mi 11I 5G</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- Add more cards for Samsung as needed -->
+      <!-- </div>
+    </div>
+  </section> -->
+  <!-- Brand Section 1: Samsung -->
+    <section class="brand-section">
+    <div class="container">
+      <h2 class="text-center mb-5">ONEPLUS</h2>
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                 <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/61LB+d0vheL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/71EA48-X7zL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/61QvnKugRuL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/61CTkx2jIsL.SX679.jpg" alt="Samsung Model 1">
+                </div>
+                <!-- Add more carousel items for Samsung as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">OnePlus Nord CE 3 Lite 5G</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 2 -->
+        <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                 <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/61u9zN1HYCL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/71klFSrkIOL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/51rFpiGJFRL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                 <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/519zMN+tUsL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Add more carousel items for Samsung as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">OnePlus 11R 5G</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 1 -->
+         <!-- <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> -->
+                <!-- Carousel Item 1 -->
+                <!-- <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/61QRgOgBx0L.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Carousel Item 2 -->
+                 <!-- <div class="carousel-item">
+                  <img src="" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/510YZx4v3wL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                 <div class="carousel-item active">
+                  <img src="path/to/samsung-model1.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>  -->
+                <!-- Add more carousel items for Samsung as needed -->
+               <!-- </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">OnePlus Nord CE 3 Lite 5G</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div>  -->
+        <!-- Card 1 -->
+        <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/41R9oD3K25L.SX300_SY300_QL70_FMwebp.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/51BJYsMmF8L.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/51MwYxcvMxL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/51mh6+YGftL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Add more carousel items for Samsung as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">OnePlus Nord CE 2 5G</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 5 -->
+          <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                 <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/41o3CoW58tL.SX300_SY300_QL70_FMwebp.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/71BwGzRUWgL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/61mZvk2WHAL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                 <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/71HS7GzW+gL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Add more carousel items for Samsung as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Motorola Moto G31</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 1 -->
+        <!-- <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> -->
+                <!-- Carousel Item 1 -->
+                <!-- <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/l1qrjbk0/mobile/t/e/j/-original-imagd8pyehxtp4yg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Carousel Item 2 -->
+                <!-- <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/l1nwnm80/mobile/l/k/i/-original-imagd6kvufxzxgbh.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/l1nwnm80/mobile/d/5/p/-original-imagd6kvgemy4was.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- <div class="carousel-item active">
+                  <img src="path/to/samsung-model1.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Add more carousel items for Samsung as needed -->
+              <!-- </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Motorola Moto G22</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- Add more cards for Samsung as needed -->
+      <!-- </div>
+    </div>
+  </section> -->
+  <!-- Brand Section 1: Samsung -->
+  <section class="brand-section">
+    <div class="container">
+      <h2 class="text-center mb-5">REALME </h2>
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/819bwF7gjfL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/71DoeFhRxrL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/71CSQz2v1wL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/51hcOWADb3L.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Add more carousel items for Samsung as needed -->
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Realme narzo 50i Prime</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/81ogvU1j6qL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/81ZWQBCvCgL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/7179Std+mzL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/71VwpCcxDmL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Add more carousel items for Samsung as needed -->
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Realme narzo N55</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                 <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/81WimZLWH1L.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/81yNIhv3kLL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/719ftrLGjTL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/51WnhxK6fqL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Add more carousel items for Samsung as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Realme narzo 60X 5G</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 1 -->
+         <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> 
+                <!-- Carousel Item 1 -->
+                 <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/71HZ0tigFFL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <!-- Carousel Item 2 -->
+                 <div class="carousel-item">
+                  <img src="https://m.media-amazon.com/images/I/81I++oJCbjL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/816gp9z+8pL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://m.media-amazon.com/images/I/81CMu8jKxRL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
+                </div> 
+                <!-- Add more carousel items for Samsung as needed -->
+               </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Realme 11 Pro 5G</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- Card 1 -->
+        <!-- <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> -->
+                <!-- Carousel Item 1 -->
+                <!-- <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/l3rmzrk0/mobile/z/i/t/-original-imagetme2k2rva45.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Carousel Item 2 -->
+                <!-- <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/ksgehzk0/mobile/j/z/j/gt-5g-rmx2202-realme-original-imag6ygf65rjzgww.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/ksgehzk0/mobile/b/y/g/gt-5g-rmx2202-realme-original-imag6ygfn9fzbzyy.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/ksgehzk0/mobile/o/i/c/gt-5g-rmx2202-realme-original-imag6ygfkebbvuyh.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Add more carousel items for Samsung as needed -->
+              <!-- </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Realme GT</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- Card 1 -->
+        <!-- <div class="col-lg-6">
+          <div class="card">
+            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner"> -->
+                <!-- Carousel Item 1 -->
+                <!-- <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/0/n/r/narzo-n53-rmx3761-realme-original-imagpygzxcuysz9k.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Carousel Item 2 -->
+                <!-- <div class="carousel-item">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/e/t/x/narzo-n53-rmx3761-realme-original-imagpygzfd9d4yjv.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/2/z/narzo-n53-rmx3761-realme-original-imagpygznvyznc2r.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div>
+                <div class="carousel-item active">
+                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/k/c/narzo-n53-rmx3761-realme-original-imagpygzyhgpqzwg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
+                </div> -->
+                <!-- Add more carousel items for Samsung as needed -->
+              </div>
+            </div>
+            <!-- <div class="card-body">
+              <h5 class="card-title">Realme Narzo N53</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
+              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
+                <button type="button" class="btn btn-info">View Specifications</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- Add more cards for Samsung as needed -->
+      <!-- </div>
+    </div>
+  </section> -->
 
-  </footer><!-- End Footer -->
+  <!-- Brand Section 2: Apple -->
+  <!-- Add similar sections for other brands (Apple, Xiaomi, OnePlus, Motorola) -->
 
-  <!-- Scroll Top Button -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <!-- Rest of your content -->
 
-  <!-- Preloader -->
-  <div id="preloader">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <!-- chatbot -->
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script>
-    window.botpressWebChat.init({
-      "composerPlaceholder": "Chat with PickZ",
-      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
-      "botId": "69f03d93-47fb-4f42-b407-80c8e7e54ad9",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "69f03d93-47fb-4f42-b407-80c8e7e54ad9",
-      "webhookId": "b5baced0-2536-4110-94c6-a3a084c0a363",
-      "lazySocket": true,
-      "themeName": "prism",
-      "botName": "PickZ",
-      "avatarUrl": "https://images-platform.99static.com//X0F3CDfCL6LcdPsSJNtRXSGn86Q=/108x1101:902x1895/fit-in/500x500/99designs-contests-attachments/126/126736/attachment_126736972",
-      "stylesheet": "https://webchat-styler-css.botpress.app/prod/71ffe266-f619-4ca4-98ee-0c9aea273dee/v60920/style.css",
-      "frontendVersion": "v1",
-      "useSessionStorage": true,
-      "theme": "prism",
-      "themeColor": "#2563eb"
-    });
+    // Initialize Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
   </script>
-
-  <!-- script -->
-  <script src="/assets/js/checkout.js"></script>
-
-
-  <!-- Vendor JS Files -->
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
-
 </body>
-
 </html>
