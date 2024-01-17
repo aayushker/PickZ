@@ -17,7 +17,7 @@ app.post('/send-email', (req, res) => {
 
     const apiInstance = new Brevo.TransactionalEmailsApi();
     const sendSmtpEmail = new Brevo.SendSmtpEmail({
-        sender: { email: 'brevo@brevo.com', name: 'Brevo' },
+        sender: { email: 'pickz.2023@gmail.com', name: 'Pickz Support' },
         subject: subject || 'Default Subject',
         htmlContent: `<p>${message || 'Default Message'}</p>`,
         messageVersions: [
