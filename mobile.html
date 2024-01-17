@@ -105,6 +105,54 @@
       flex: 0 0 auto;
       transition: transform 0.5s ease-in-out;
     }
+    header {
+      background-color: #343a40; /* Dark background color for the header */
+      padding: 20px 0; /* Increased height for the header */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow for a professional look */
+      position: sticky;
+      height: 80px;
+      padding: 0px;
+      background-color: #007eb6;
+      position: sticky;
+      top: 0;
+      z-index: 999;}
+        
+
+    header a {
+      color: #fff; /* White text color for header links */
+      text-decoration: none;
+      transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+    }
+
+    header a:hover {
+      color: #f39c12; /* Hover color for header links */
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #343a40; /* Dark background color for the footer */
+      color: #fff; /* White text color for footer content */
+      padding: 20px 0; /* Increased height for the footer */
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow for a professional look */
+      width: 1525px;
+      margin-left: -8%;
+      
+    }
+
+    footer a {
+      color: #fff; /* White text color for footer links */
+      text-decoration: none;
+      transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+    }
+
+    footer a:hover {
+      color: #f39c12; /* Hover color for footer links */
+    }
+    footer .container {
+      padding-left: 25px;
+      width: 100%; /* Set the width of the container to 100% */
+      max-width: 100%;
+    }
 
     .tooltip-inner {
       background-color: #333; /* Tooltip background color */
@@ -128,6 +176,20 @@
   </style>
 </head>
 <body>
+  <header class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1 class="h3 mb-0">PickZ</h1>
+        <nav>
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="#" class="text-white">Home</a></li>
+            <li class="list-inline-item"><a href="#" class="text-white">Products</a></li>
+            <li class="list-inline-item"><a href="#" class="text-white">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
   <!-- Full-width Jumbotron -->
   <div class="jumbotron text-center">
     <h1 class="display-2">Elevate Your Mobile Experience</h1>
@@ -154,10 +216,10 @@
                 <div class="carousel-item">
                   <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/g/m/t/-original-imagmg6gyhzhh3fb.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/p/4/u/-original-imagmg6gynphgrh8.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/y/u/-original-imagmg6ggzazdevx.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
                 </div>
                 <!-- Add more carousel items for Samsung as needed -->
@@ -185,10 +247,10 @@
                 <div class="carousel-item">
                   <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/w/9/6/-original-imagmg6gvvh2z9av.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                   <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/v/u/-original-imagmgfryjmxmsgk.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/8/9/y/-original-imagmg6gzymct4b6.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
                 </div>
                 <!-- Add more carousel items for Samsung as needed -->
@@ -216,10 +278,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/61iyD6FNoLL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71LHz2oJkML.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <!-- <div class="carousel-item active">
+                <!-- <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/61iA3wAvJwL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>  -->
                 <!-- Add more carousel items for Samsung as needed -->
@@ -306,13 +368,13 @@
                   <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/t/o/b/galaxy-flip5-sm-f731blgains-samsung-original-imagru5pcagms7me.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
                 </div> -->
                 <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
+                 <div class="carousel-item active">
                   <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/y/a/n/galaxy-flip5-sm-f731bliains-samsung-original-imagru5pscnusd6r.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
                 </div>  
-                 <div class="carousel-item active">
+                 <div class="carousel-item">
                   <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/a/p/4/galaxy-flip5-sm-f731bliains-samsung-original-imagru5pwkz8z9zj.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
-                  <div class="carousel-item active">
+                  <div class="carousel-item">
                   <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/m/2/m/galaxy-flip5-sm-f731bliains-samsung-original-imagru5ppffxcaaz.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
                 <!-- Add more carousel items for Samsung as needed -->
@@ -349,10 +411,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/51brdXeugJL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div> 
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/81BnjSLm2oL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/617JW0DrG8L.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
                 <!-- Add more carousel items for apple as needed -->
@@ -380,10 +442,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/51FNWDM4tAL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71BcQW-u8xL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                 <div class="carousel-item active">
+                 <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/711JE+dD1KL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>  
                 <!-- Add more carousel items for Samsung as needed -->
@@ -411,10 +473,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/61iTWldZ9qL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71uNkgYrWcL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71G44HUh7yL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
                 <!-- Add more carousel items for Samsung as needed -->
@@ -442,10 +504,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/81hAAaDTJ5L.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71+tlCn1oXL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71djPfkB07L.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
                 <!-- Add more carousel items for Samsung as needed -->
@@ -575,7 +637,7 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/81SocKy8ghL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/41lU0HdCnTL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
                 <!-- <div class="carousel-item active">
@@ -606,10 +668,10 @@
                 <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/81Op4bDjc9L.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/61abq59uyQL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/717g+qSowzL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
                 <!-- Add more carousel items for Samsung as needed -->
@@ -668,10 +730,10 @@
                 <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/81iXlIBh4TL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71-1G7QZKKL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71ZADrj3pkL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
                 <!-- Add more carousel items for Samsung as needed -->
@@ -739,10 +801,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/71EA48-X7zL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/61QvnKugRuL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/61CTkx2jIsL.SX679.jpg" alt="Samsung Model 1">
                 </div>
                 <!-- Add more carousel items for Samsung as needed -->
@@ -770,10 +832,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/71klFSrkIOL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/51rFpiGJFRL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
-                 <div class="carousel-item active">
+                 <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/519zMN+tUsL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
                 <!-- Add more carousel items for Samsung as needed -->
@@ -832,10 +894,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/51BJYsMmF8L.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/51MwYxcvMxL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/51mh6+YGftL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
                 <!-- Add more carousel items for Samsung as needed -->
@@ -863,10 +925,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/71BwGzRUWgL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/61mZvk2WHAL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
-                 <div class="carousel-item active">
+                 <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71HS7GzW+gL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
                 <!-- Add more carousel items for Samsung as needed -->
@@ -934,10 +996,10 @@
                 <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/71DoeFhRxrL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71CSQz2v1wL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/51hcOWADb3L.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
                 <!-- Add more carousel items for Samsung as needed -->
@@ -965,10 +1027,10 @@
                 <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/81ZWQBCvCgL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/7179Std+mzL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/71VwpCcxDmL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
                 <!-- Add more carousel items for Samsung as needed -->
@@ -996,10 +1058,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/81yNIhv3kLL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/719ftrLGjTL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/51WnhxK6fqL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
                 <!-- Add more carousel items for Samsung as needed -->
@@ -1027,10 +1089,10 @@
                  <div class="carousel-item">
                   <img src="https://m.media-amazon.com/images/I/81I++oJCbjL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/816gp9z+8pL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item ">
                   <img src="https://m.media-amazon.com/images/I/81CMu8jKxRL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
                 </div> 
                 <!-- Add more carousel items for Samsung as needed -->
@@ -1116,6 +1178,25 @@
   <!-- Add similar sections for other brands (Apple, Xiaomi, OnePlus, Motorola) -->
 
   <!-- Rest of your content -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Contact Us</h4>
+          <p>Email: info@yourbrand.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="col-md-6">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Home</a></li>
+            <li><a href="#" class="text-white">Products</a></li>
+            <li><a href="#" class="text-white">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script>
@@ -1123,7 +1204,30 @@
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
+    });
+  </script>
+      
+  <!-- chatbot -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with PickZ",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "69f03d93-47fb-4f42-b407-80c8e7e54ad9",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "69f03d93-47fb-4f42-b407-80c8e7e54ad9",
+      "webhookId": "b5baced0-2536-4110-94c6-a3a084c0a363",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "PickZ",
+      "avatarUrl": "https://images-platform.99static.com//X0F3CDfCL6LcdPsSJNtRXSGn86Q=/108x1101:902x1895/fit-in/500x500/99designs-contests-attachments/126/126736/attachment_126736972",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/71ffe266-f619-4ca4-98ee-0c9aea273dee/v60920/style.css",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "theme": "prism",
+      "themeColor": "#2563eb"
+    });
   </script>
 </body>
 </html>
