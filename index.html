@@ -32,6 +32,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet" />
+  <link rel="stylesheet" href="toast.css">
 </head>
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
@@ -700,25 +701,24 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="mailto:singhaayushker@gmail.com" method="post" enctype="text/plain" class="php-email-form"
-              data-aos="fade-up" data-aos-delay="200">
+            <form class="php-email-form" id="contactForm">
               <!-- <form action="http://127.0.0.1:5500/send-email" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200"> -->
 
               <div class="row gy-4">
                 <div class="col-md-6">
-                  <input type="text" n ame="name" class="form-control" placeholder="Your Name" required />
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required />
                 </div>
 
                 <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required />
+                  <input type="text" class="form-control" name="subject" id="phone" placeholder="Subject" required />
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="message" rows="6" id="message" placeholder="Message" required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -728,7 +728,7 @@
                     Your message has been sent. Thank you!
                   </div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit" onclick="sendEmail()">Send Message</button>
                 </div>
               </div>
             </form>
@@ -737,6 +737,9 @@
         </div>
       </div>
     </section>
+    <div class="toast" id="successToast">
+      <span class="message">Email sent successfully!</span>
+    </div>
     <!-- End Contact Section -->
 
     <!-- Team Section - Home Page -->

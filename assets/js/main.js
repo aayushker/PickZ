@@ -226,3 +226,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   window.addEventListener("load", aosInit);
 });
+
+function sendEmail() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var message = document.getElementById("message").value;
+
+  // Validate input (you may add more validation as needed)
+
+  // Make an AJAX request to the Spring Boot backend
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "http://localhost:8080/sendEmail", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+              showSuccessToast();
+              document.getElementById("contactForm").reset();
+          } else {
+              alert("Error sending email. Please try again later.");
+          }
+      }
+  };
+
+  var data = JSON.stringify({
+      from: email,
+      subject: "Contact Form Submission",
+      message: "Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\n\nMessage:\n" + message
+  });
+
+  xhr.send(data);
+}
+
+function showSuccessToast() {
+  var toast = document.getElementById("successToast");
+  toast.classList.add("show");
+  
+  setTimeout(function() {
+      toast.classList.remove("show");
+  }, 3000); // Hide the toast after 3 seconds
+}
+
