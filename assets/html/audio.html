@@ -1,1132 +1,860 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Premium Mobile Experience</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <style>
-    body {
-      background-color: #2c3e50; /* Dark background color for the page */
-      color: #fff; /* Light text color for the page */
-    }
+  <meta name="description" content="Let us help you assist with your product selection process!">
+  <meta name="author" content="Akshat Srivastav">
+  <title>Audio - PickZ</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
 
-    /* Custom styles for the full-width Jumbotron */
-    .jumbotron {
-      background: linear-gradient(45deg, #2c3e50, #34495e), url('path/to/your/textured-image.png'); /* Gradient background with textured overlay */
-      color: #fff; /* Text color on the Jumbotron */
-      padding: 150px 0; /* Increased height for the Jumbotron */
-      border-radius: 0; /* No border-radius for full-width */
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      overflow: hidden;
-      width: 100%; /* Full width */
-      margin: 0; /* Remove default margin */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-    }
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/Favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/Favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/Favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/Favicon/site.webmanifest" />
+  <link rel="manifest" href="/assets/Favicon/site.webmanifest" />
 
-    .jumbotron::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3); /* Textured overlay to enhance the mobile phone feel */
-    }
-
-    /* Custom styles for the components within the Jumbotron */
-    .jumbotron h1,
-    .jumbotron p {
-      transition: color 0.3s ease-in-out; /* Smooth transition for text color */
-    }
-
-    .jumbotron h1 {
-      font-size: 3.5rem; /* Larger font size for the main title */
-      font-weight: bold;
-      line-height: 1.2; /* Improved line height for better readability */
-    }
-
-    .jumbotron p {
-      font-size: 1.5rem; /* Larger font size for the description */
-      font-weight: 300; /* Lighter font weight for the description */
-      line-height: 1.5; /* Improved line height for better readability */
-    }
-
-    /* Custom styles for the lines */
-    .line {
-      height: 1px; /* Height of the line */
-      width: 50%; /* Width of the line */
-      background-color: #f39c12; /* Color of the line */
-      margin: 20px 0; /* Spacing above and below the line */
-    }
-
-    /* Custom styles for the brand sections */
-    .brand-section {
-      padding: 80px 0; /* Adjusted padding for each brand section */
-    }
-
-    /* Custom styles for the cards within each brand section */
-    .card {
-      background-color: #34495e; /* Dark background color for the cards */
-      color: #fff; /* Light text color for the cards */
-      border: none; /* No border for the cards */
-      border-radius: 0; /* No border-radius for the cards */
-      margin-bottom: 30px; /* Spacing between cards */
-      overflow: hidden;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .card:hover .carousel-inner {
-      transform: translateX(0); /* Show the full width of the carousel on hover */
-    }
-
-    .card-img-top {
-      border-bottom: 1px solid #2c3e50; /* Border at the bottom of the card image */
-    }
-
-    .card-title {
-      font-weight: bold; /* Bold font for the card title */
-    }
-
-    .card-text {
-      font-size: 1.2rem; /* Font size for the card text */
-    }
-
-    .carousel-inner {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .carousel-item {
-      width: 100%; /* Full width for each carousel item */
-      flex: 0 0 auto;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .tooltip-inner {
-      background-color: #333; /* Tooltip background color */
-    }
-
-    .tooltip.bs-tooltip-top .tooltip-arrow::before {
-      border-top-color: #333; /* Tooltip arrow color for top placement */
-    }
-
-    .tooltip.bs-tooltip-right .tooltip-arrow::before {
-      border-right-color: #333; /* Tooltip arrow color for right placement */
-    }
-
-    .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
-      border-bottom-color: #333; /* Tooltip arrow color for bottom placement */
-    }
-
-    .tooltip.bs-tooltip-left .tooltip-arrow::before {
-      border-left-color: #333; /* Tooltip arrow color for left placement */
-    }
-  </style>
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/audio.css">
+  <link rel="stylesheet" href="/assets/utils/utils.css">
 </head>
+
 <body>
-  <!-- Full-width Jumbotron -->
+
   <div class="jumbotron text-center">
     <h1 class="display-2">Elevate Your Audio Experience</h1>
-    <p class="lead">Forge sonic mastery in every frequency. Redefine your audio journey with a symphony of innovation.</p>
+    <p class="lead">Forge sonic mastery in every frequency. Redefine your audio journey with a symphony of innovation.
+    </p>
     <div class="line mx-auto"></div> <!-- Centered line -->
-    <p>Unleash sonic brilliance in every wavelength. Elevate your auditory experience with groundbreaking innovation.</p>
+    <p>Unleash sonic brilliance in every wavelength. Elevate your auditory experience with groundbreaking innovation.
+    </p>
   </div>
 
-  <!-- Brand Section 1: Boat -->
-  <section class="brand-section">
+  <h1 class="neta">BOAT</h1>
+  <div class="shell">
     <div class="container">
-      <h2 class="text-center mb-5">BOAT</h2>
       <div class="row">
-        <!-- Card 1 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61+VJT8U-LL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71Gwx8zlgBL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61Tm5PRIH8L._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/610Otdvfc2L._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
+        <div class="col-md-3">
+          <div class="wsk-cp-product">
+            <div class="wsk-cp-img">
+              <img src="https://m.media-amazon.com/images/I/61S2z5PwUqL._SX522_.jpg" alt="Product"
+                class="img-responsive" />
             </div>
-            <div class="card-body">
-              <h5 class="card-title">boAt Rockerz 551ANC </h5>
-              <p class="card-text">
-                Hybrid Active Noise Cancellation Headphones with Up to 100H Playtime, ASAP™ Charge, Ambient Sound Mode &Dual EQ Modes, ENx™ Technology(Stellar Black)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
+            <div class="wsk-cp-text">
+              <div class="category">
+                <span>Sound Quality</span>
+              </div>
+              <div class="title-product">
+                <h3>boAt Rockerz 450</h3>
+              </div>
+              <div class="description-prod">
+                <p>Bluetooth On Ear Headphones with Mic, Upto 15 Hours Playback</p>
+              </div>
+              <div class="card-footer">
+                <div class="wcf-left"><span class="price">₹1599.00</span></div>
+                <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61ars+VGPVL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71v8mAgwITL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="hhttps://m.media-amazon.com/images/I/71-6rIpaQaL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71XTDL-qudL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
+        <div class="col-md-3">
+          <div class="wsk-cp-product">
+            <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61F-EnHAdFL._SX679_.jpg" alt="Product"
+                class="img-responsive" /></div>
+            <div class="wsk-cp-text">
+              <div class="category">
+                <span>Battery Backup</span>
               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">boAt Airdopes 141 ANC </h5>
-              <p class="card-text">TWS Earbuds with 32 dB ANC, 42 HRS Playback, 50ms Low Latency Beast™ Mode, IWP™ Tech,Quad Mics with ENx™,ASAP™ Charge,USB Type-C Port & IPX5(Gunmetal Black)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
+              <div class="title-product">
+                <h3>boAt Rockerz 255 Pro+</h3>
+              </div>
+              <div class="description-prod">
+                <p>Bluetooth in Ear Neckband with Upto 60 Hours Playback</p>
+              </div>
+              <div class="card-footer">
+                <div class="wcf-left"><span class="price">₹1099.000</span></div>
+                <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
               </div>
             </div>
           </div>
         </div>
-         <!-- Card 3  -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/31HCup1pqFL._SX300_SY300_QL70_FMwebp_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/61F-EnHAdFL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61M8Vck-ZoL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61ioyStWyYL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div> 
-             </div>
-            <div class="card-body">
-              <h5 class="card-title">boAt Rockerz 255 Pro+</h5>
-              <p class="card-text">Bluetooth in Ear Neckband with Upto 60 Hours Playback, ASAP Charge, IPX7, Dual Pairing and Bluetooth v5.2(Active Black)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
+        <div class="col-md-3">
+          <div class="wsk-cp-product">
+            <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61ZLY9A7oTS._SX522_.jpg" alt="Product"
+                class="img-responsive" /></div>
+            <div class="wsk-cp-text">
+              <div class="category">
+                <span>Heavy Bass</span>
               </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 4 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/a/a/v/galaxy-a34-5g-sm-a346ezkeins-samsung-original-imagnpz4h7xg6pgg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/w/o/t/galaxy-a34-5g-sm-a346ezkeins-samsung-original-imagnpz4f3uspzhd.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/j/n/n/-original-imagq6bgzjrghzck.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/e/o/t/-original-imagq6bgfcfszhxd.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Samsung Galaxy A34 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
+              <div class="title-product">
+                <h3>boAt Bassheads 228</h3>
               </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Card 1 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/s/x/z/-original-imagfzjgxyrv9zwz.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/a/v/-original-imagfzjgg8ud6av6.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/z/p/-original-imagfzjgjhpttu9y.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/1/b/x/-original-imagfzjgdmgg8r7p.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Samsung Galaxy M53 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
+              <div class="description-prod">
+                <p>Wired in Ear Earphones with Heavy Bass, Integrated Controls.</p>
               </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Card 1 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/41TAKjYMgxL._SX300_SY300_QL70_FMwebp_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/714BJBCHBIL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>  
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61mi4jFkaVL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                  <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71TB3lUjAEL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">boAt Stone 352 </h5>
-               <p class="card-text">Bluetooth Speaker with 10W RMS Stereo Sound, IPX7 Water Resistance, TWS Feature, Up to 12H Total Playtime, Multi-Compatibility Modes and Type-C Charging(Raging Black)</p> 
-               <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
+              <div class="card-footer">
+                <div class="wcf-left"><span class="price">₹449.000</span></div>
+                <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Add more cards for Samsung as needed -->
+        <div class="col-md-3">
+          <div class="wsk-cp-product">
+            <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61+erqJFD3L._SX679_.jpg" alt="Product"
+                class="img-responsive" /></div>
+            <div class="wsk-cp-text">
+              <div class="category">
+                <span>Low Latency</span>
+              </div>
+              <div class="title-product">
+                <h3>boAt Airdopes 141 ANC</h3>
+              </div>
+              <div class="description-prod">
+                <p>TWS Earbuds with 32 dB ANC, 42 HRS Playback, 50ms Low Latency</p>
+              </div>
+              <div class="card-footer">
+                <div class="wcf-left"><span class="price">₹1499.000</span></div>
+                <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- Brand Section 1: apple -->
-   <section class="brand-section">
-    <div class="container">
-      <h2 class="text-center mb-5">SONY</h2>
-      <div class="row"> 
-        <!-- Card 1 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61WFNqf8hVL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/61TADJuzJHL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div> 
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71Kb-8mYd8L._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71+G2BVfTOL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for apple as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Sony WH-XB910N </h5> 
-               <p class="card-text">Extra BASS Noise Cancellation Headphones Wireless Bluetooth Over The Ear Headset with Mic, Alexa Voice Control, Google Fast Pair, AUX & Swift Pair, 30Hrs Battery Life (2022 Model)-Black</p> 
-               <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 2 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61gr7ExN6ML._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/615YbV+-iAL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71fiwqnRpQL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71WlmdNuJfL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>  
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Sony WF-C500 </h5>
-               <p class="card-text">Truly Wireless Bluetooth Earbuds with 20Hrs Battery, True Wireless Earbuds with Mic for Phone Calls, Quick Charge, Fast Pair, 360 Reality Audio, Upscale Music - DSEE, App Support - Black</p> 
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 3 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/41E--EoLIIL._SY300_SX300_QL70_FMwebp_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71uuK212OlL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/91Ragv1G-aL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81BChvoSBUL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Sony HT-S20R </h5>
-              <p class="card-text">Real 5.1ch Dolby Digital Soundbar for TV with subwoofer and Compact Rear Speakers, 5.1ch Home Theatre System (400W,Bluetooth & USB Connectivity, HDMI & Optical connectivity)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 4 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/614pmXRPMFL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/51omrZTjNSL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71LPbzq9D3L._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/51Hh3teqrEL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Sony Srs-Xb13 </h5>
-              <p class="card-text">Wireless Extra Bass Portable Compact Bluetooth Speaker with 16 Hours Battery Life, Type-C, Ip67 Waterproof, Dustproof, with Mic, Loud Audio for Phone Calls/Work from Home (Black), Small</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 5 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/d/9/-original-imagtc2qzgnnuhxh.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/u/m/3/-original-imagtc5ffhbausfy.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/i/h/z/-original-imagtc5fbxefnjtj.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/e/g/k/-original-imagtc5f2k44dgax.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">I phone 15</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Card 6 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/y/h/a/iphone-13-mini-mlk93hn-a-apple-original-imag6vp6thrzzcjg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/a/i/l/iphone-13-mini-mlk93hn-a-apple-original-imag6vp6x67yypzk.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/y/h/a/iphone-13-mini-mlk93hn-a-apple-original-imag6vp6thrzzcjg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/e/g/-original-imagh7g8k7ttcdkc.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">I phone 13 mini </h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Add more cards for Samsung as needed -->
-      <!-- </div>
-    </div>
-  </section> -->
-  <!-- Brand Section 1: Samsung -->
-   <section class="brand-section">
-    <div class="container">
-      <h2 class="text-center mb-5">MIVI</h2>
-      <div class="row">
-        <!-- Card 1 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/31rt5WJ7cMS._SX300_SY300_QL70_FMwebp_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71sNJdmmX1S._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <!-- <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71wXtCW3AeS._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71hAl9RQlxS._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>  -->
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Mivi Play </h5>
-              <p class="card-text">Bluetooth Speaker with 12 Hours Playtime. Wireless Speaker Made in India with Exceptional Sound Quality, Portable and Built in Mic-Black</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 2 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61d4hVRb+dS._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71cb33excyS._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61vKye+iq0L._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/714gtMT+l6S._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Mivi Duopods A25 </h5>
-              <p class="card-text">Bluetooth Truly Wireless in Ear Earbuds with Mic with 40Hours Battery, 13Mm Bass Drivers & Made in India. with Immersive Sound Quality, Voice Assistant, Touch Control (Black)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 3 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/614TPwWfWHL._SX300_SY300_QL70_FMwebp_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/81mUSFkEygL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81EJk1pa9TL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/91VmVtSDW4L._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Mivi Roam 2 </h5>
-              <p class="card-text">Bluetooth 5W Portable Speaker,24 Hours Playtime,Powerful Bass, Wireless Stereo Speaker with Studio Quality Sound,Waterproof, Bluetooth 5.0 and in-Built Mic with Voice Assistance-Blue</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 1 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                 <!-- <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/41uLxtgZ7bL._SX300_SY300_QL70_FMwebp_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/41QeTDEBrfL._SY741_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/21ejKw-RH-L._SY741_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/21SYKUoaK6L._SY741_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Redmi Note 12 Pro+</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>  -->
-        <!-- Card 5 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61d4hVRb+dS._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71cb33excyS._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61vKye+iq0L._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/714gtMT+l6S._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Mivi Duopods A25 </h5>
-              <p class="card-text">Bluetooth Truly Wireless in Ear Earbuds with Mic with 40Hours Battery, 13Mm Bass Drivers & Made in India. with Immersive Sound Quality, Voice Assistant, Touch Control (Black)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 6 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ky7lci80/mobile/e/j/x/-original-imagag2gatsxzcuv.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ky1vl3k0/mobile/2/k/h/-original-imagadbyajtxpsgd.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div> -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/kxz0pe80/mobile/a/q/x/-original-imagaaxkgrq48xzf.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/kxz0pe80/mobile/k/f/a/-original-imagaaxkzakbdf9g.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Mi 11I 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Add more cards for Samsung as needed -->
-      <!-- </div>
-    </div>
-  </section> -->
-  <!-- Brand Section 1: Samsung -->
-    <section class="brand-section">
-    <div class="container">
-      <h2 class="text-center mb-5">ONEPLUS</h2>
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/31IdsY7yWTL._SX300_SY300_QL70_FMwebp_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71Ir9qUcqwL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61r5p5A9R3L._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61vsa8+cNoL._SX679_.jpg" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">OnePlus Nord Buds 2 </h5>
-              <p class="card-text">TWS in Ear Earbuds with Mic,Upto 25dB ANC 12.4mm Dynamic Titanium Drivers, Playback:Upto 36hr case, 4-Mic Design, IP55 Rating, Fast Charging [Thunder Gray]</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 2 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/31XKaSyc+IL._SY300_SX300_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/61fcGDt5OmL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/514s2RN+E4L._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/514GLi+OoEL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">OnePlus Bullets Wireless Z2 ANC </h5>
-              <p class="card-text">Bluetooth in Ear Earphones with Mic, 45dB Hybrid ANC, Bombastic Bass - 12.4 mm Drivers, 10 Mins Charge - 20 Hrs Music, 28 Hrs Battery (Green)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 1 -->
-         <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                 <!-- <div class="carousel-item">
-                  <img src="" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/510YZx4v3wL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                 <div class="carousel-item active">
-                  <img src="path/to/samsung-model1.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>  -->
-                <!-- Add more carousel items for Samsung as needed -->
-               <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">OnePlus Nord CE 3 Lite 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>  -->
-        <!-- Card 1 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/51AMqyp+sfL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/51Ip185nxKL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71XGVy1k12L._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61a03Uc7ccL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">OnePlus Buds Z2</h5>
-              <p class="card-text">Bluetooth Truly Wireless in Ear Earbuds with mic, Active Noise Cancellation, 10 Minutes Flash Charge & Upto 38 Hours Battery (Obsidian Black)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 5 -->
-          <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/5171kgKguGL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/51ZWE9W53fL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/514BhcmS+hL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71WTqE8FijL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">OnePlus Bullets Z2</h5>
-              <p class="card-text">Bluetooth Wireless in Ear Earphones with Mic, Bombastic Bass, 10 Mins Charge - 20 Hrs Music, 30 Hrs Battery Life (Acoustic Red)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 1 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/l1qrjbk0/mobile/t/e/j/-original-imagd8pyehxtp4yg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/l1nwnm80/mobile/l/k/i/-original-imagd6kvufxzxgbh.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/l1nwnm80/mobile/d/5/p/-original-imagd6kvgemy4was.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- <div class="carousel-item active">
-                  <img src="path/to/samsung-model1.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Motorola Moto G22</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Add more cards for Samsung as needed -->
-      <!-- </div>
-    </div>
-  </section> -->
-  <!-- Brand Section 1: Samsung -->
-  <section class="brand-section">
-    <div class="container">
-      <h2 class="text-center mb-5">BOULT </h2>
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61LlQRdDZ2L._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/81L0b-YbkSL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81hChe9P0XL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81pI74bn3sL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Boult Audio Z40</h5>
-              <p class="card-text">True Wireless in Ear Earbuds with 60H Playtime, Zen™ ENC Mic, Low Latency Gaming, Type-C Fast Charging, Made in India, 10mm Rich Bass Drivers, IPX5, Bluetooth 5.3 Ear Buds TWS (Blue)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81hft+H1HHL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/81QnN-sngiL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81nPyV4wbbL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81Jd8k8z9BL._SX679_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Boult Audio BassBuds X1</h5>
-              <p class="card-text">in-Ear Wired Earphones with 10mm Extra Bass Driver and HD Sound with mic(Black)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/41WF8dKrWvL._SX300_SY300_QL70_FMwebp_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/817ccCE4EWL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81qxS+nfR-L._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71uBj8k81UL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Boult Audio Truebuds </h5>
-              <p class="card-text">Truly Wireless in Ear Earbuds with 32H Battery Life, Type-C Fast Charging, IPX7 Waterproof, Made in India, Rich Bass Bluetooth Ear Buds TWS Airbass Bluetooth Ear Buds (Red)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 1 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/41bu+TrxY0L._SY300_SX300_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/81lVC2YsVhL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81KZpt2hg8L._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/91yR6qWMCGL._SX522_.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Boult Audio ProBass Thunder</h5>
-              <p class="card-text">Over-Ear Wireless Bluetooth Headphones with Mic, Headset with Long Battery Life</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 1 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/l3rmzrk0/mobile/z/i/t/-original-imagetme2k2rva45.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ksgehzk0/mobile/j/z/j/gt-5g-rmx2202-realme-original-imag6ygf65rjzgww.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ksgehzk0/mobile/b/y/g/gt-5g-rmx2202-realme-original-imag6ygfn9fzbzyy.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ksgehzk0/mobile/o/i/c/gt-5g-rmx2202-realme-original-imag6ygfkebbvuyh.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Realme GT</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Card 1 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/0/n/r/narzo-n53-rmx3761-realme-original-imagpygzxcuysz9k.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/e/t/x/narzo-n53-rmx3761-realme-original-imagpygzfd9d4yjv.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/2/z/narzo-n53-rmx3761-realme-original-imagpygznvyznc2r.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/k/c/narzo-n53-rmx3761-realme-original-imagpygzyhgpqzwg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <!-- <div class="card-body">
-              <h5 class="card-title">Realme Narzo N53</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Add more cards for Samsung as needed -->
-      <!-- </div>
-    </div>
-  </section> -->
 
-  <!-- Brand Section 2: Apple -->
-  <!-- Add similar sections for other brands (Apple, Xiaomi, OnePlus, Motorola) -->
+      <div class="shell">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img">
+                  <img src="https://m.media-amazon.com/images/I/714BJBCHBIL._SX679_.jpg" alt="Product"
+                    class="img-responsive" />
+                </div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Stereo Sound</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>boAt Stone 352</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>Speaker with 10W RMS Stereo Sound, IPX7 Water Resistance</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">₹1299.000</span></div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71byeOOUNBL._SX679_.jpg"
+                    alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Subwoofer</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>boAt Stone 650</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>10W Bluetooth Speaker with Upto 7 Hours Playback, IPX5 </p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">₹1999.000</span></div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/81dU70BD6BL._SX679_.jpg"
+                    alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Monstrous Sound</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>boAt Stone 1000 </h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>14W Bluetooth Speaker with 8 Hours Playback, Bluetooth v5.0</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">₹2199.000</span></div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="wsk-cp-product">
+                <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71ep9KYzuhL._SX522_.jpg"
+                    alt="Product" class="img-responsive" /></div>
+                <div class="wsk-cp-text">
+                  <div class="category">
+                    <span>Budget Friendly</span>
+                  </div>
+                  <div class="title-product">
+                    <h3>boAt Stone 180</h3>
+                  </div>
+                  <div class="description-prod">
+                    <p>5W Bluetooth Speaker with Upto 10 Hours Playback, 1.75" Driver, IPX7</p>
+                  </div>
+                  <div class="card-footer">
+                    <div class="wcf-left"><span class="price">₹999.000</span></div>
+                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  <!-- Rest of your content -->
+          <!-- for second product. -->
+          <h1 class="neta">JBL</h1>
+          <div class="shell">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img">
+                      <img src="https://m.media-amazon.com/images/I/71kXrR4i8IL._SX522_.jpg" alt="Product"
+                        class="img-responsive" />
+                    </div>
+                    <div class="wsk-cp-text">
+                      <div class="category">
+                        <span>Speed Charge</span>
+                      </div>
+                      <div class="title-product">
+                        <h3>JBL Tune 235NC</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Ear Wireless ANC Earbuds (TWS), Massive 40Hrs Playtime</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">₹3798.00</span></div>
+                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/91kcPKEG-NL._SX522_.jpg"
+                        alt="Product" class="img-responsive" /></div>
+                    <div class="wsk-cp-text">
+                      <div class="category">
+                        <span>Pure Bass</span>
+                      </div>
+                      <div class="title-product">
+                        <h3>JBL C100SI</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Wired In Ear Headphones with Mic, JBL Pure Bass Sound</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">₹548.000</span></div>
+                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61kFL7ywsZS._SX522_.jpg"
+                        alt="Product" class="img-responsive" /></div>
+                    <div class="wsk-cp-text">
+                      <div class="category">
+                        <span>Dual Pairing</span>
+                      </div>
+                      <div class="title-product">
+                        <h3>JBL Tune 510BT</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>On Ear Wireless Headphones with Mic, up to 40 Hours Playtime</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">₹2698.000</span></div>
+                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71sL1psuIAL._SX679_.jpg"
+                        alt="Product" class="img-responsive" /></div>
+                    <div class="wsk-cp-text">
+                      <div class="category">
+                        <span>Dual Equalizer</span>
+                      </div>
+                      <div class="title-product">
+                        <h3>Infinity - JBL Tranz N400</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>in-Ear Headphones with 36 Hr Playtime, Fast Charge, Deep Bass</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">₹798.000</span></div>
+                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script>
-    // Initialize Bootstrap tooltips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  </script>
+              <div class="shell">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img">
+                          <img src="https://m.media-amazon.com/images/I/71mSiexKRdL._SX522_.jpg" alt="Product"
+                            class="img-responsive" />
+                        </div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>Dolby Sound</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>JBL Cinema SB241</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>Digital Soundbar with Wired Subwoofer Extra Deep Bass, 2.1</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">₹6998.000</span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                  class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/81mxx9Za+DL._SX522_.jpg"
+                            alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>Party Speaker</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>JBL Partybox 310</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>240W Monstrous Pro Sound | Dynamic Light Show</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">₹38998.000</span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                  class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61Pt4Nxpv8S._SX679_.jpg"
+                            alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>Portable Speaker</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>JBL Flip 5</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>Signature Sound with Powerful Bass Radiator</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">₹6998.000</span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                  class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61WznBHVXlL._SX522_.jpg"
+                            alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>Fabric Design</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>JBL Go 3</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>Pro Sound, Vibrant Colors with Rugged Fabric Design</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">₹2498.000</span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                  class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- third product -->
+                  <h1 class="neta">SONY</h1>
+                  <div class="shell">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="wsk-cp-product">
+                            <div class="wsk-cp-img">
+                              <img src="https://m.media-amazon.com/images/I/810-4P5R55L._SX522_.jpg" alt="Product"
+                                class="img-responsive" />
+                            </div>
+                            <div class="wsk-cp-text">
+                              <div class="category">
+                                <span>Noise Cancellation</span>
+                              </div>
+                              <div class="title-product">
+                                <h3>Sony WF-C700N</h3>
+                              </div>
+                              <div class="description-prod">
+                                <p>360 RA, Multipoint Connection, 10 mins Super Quick Charge</p>
+                              </div>
+                              <div class="card-footer">
+                                <div class="wcf-left"><span class="price">₹7989.00</span></div>
+                                <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                      class="zmdi zmdi-shopping-basket"></i></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="wsk-cp-product">
+                            <div class="wsk-cp-img"><img
+                                src="https://m.media-amazon.com/images/I/61zKkP36kDL._SX522_.jpg" alt="Product"
+                                class="img-responsive" /></div>
+                            <div class="wsk-cp-text">
+                              <div class="category">
+                                <span>Battery Backup</span>
+                              </div>
+                              <div class="title-product">
+                                <h3>Sony WF-1000XM3</h3>
+                              </div>
+                              <div class="description-prod">
+                                <p>Wired In Ear Headphones with Mic, JBL Pure Bass Sound</p>
+                              </div>
+                              <div class="card-footer">
+                                <div class="wcf-left"><span class="price">₹12299.000</span></div>
+                                <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                      class="zmdi zmdi-shopping-basket"></i></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="wsk-cp-product">
+                            <div class="wsk-cp-img"><img
+                                src="https://m.media-amazon.com/images/I/51GnhNcMl3L._SX679_.jpg" alt="Product"
+                                class="img-responsive" /></div>
+                            <div class="wsk-cp-text">
+                              <div class="category">
+                                <span>Power Gaming</span>
+                              </div>
+                              <div class="title-product">
+                                <h3>Sony PlayStation Pulse</h3>
+                              </div>
+                              <div class="description-prod">
+                                <p>Over Ear Headset/Headphone Black with Mic</p>
+                              </div>
+                              <div class="card-footer">
+                                <div class="wcf-left"><span class="price">₹6390.000</span></div>
+                                <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                      class="zmdi zmdi-shopping-basket"></i></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="wsk-cp-product">
+                            <div class="wsk-cp-img"><img
+                                src="https://m.media-amazon.com/images/I/81-ub8kav8L._SX522_.jpg" alt="Product"
+                                class="img-responsive" /></div>
+                            <div class="wsk-cp-text">
+                              <div class="category">
+                                <span>Quick Charge</span>
+                              </div>
+                              <div class="title-product">
+                                <h3>Sony WH-CH720N</h3>
+                              </div>
+                              <div class="description-prod">
+                                <p>Active Noise Cancellation Headphones with Mic</p>
+                              </div>
+                              <div class="card-footer">
+                                <div class="wcf-left"><span class="price">₹7989.000</span></div>
+                                <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                      class="zmdi zmdi-shopping-basket"></i></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="shell">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <div class="wsk-cp-product">
+                                <div class="wsk-cp-img">
+                                  <img src="https://m.media-amazon.com/images/I/51Hh3teqrEL._SX679_.jpg" alt="Product"
+                                    class="img-responsive" />
+                                </div>
+                                <div class="wsk-cp-text">
+                                  <div class="category">
+                                    <span>Extra Bass</span>
+                                  </div>
+                                  <div class="title-product">
+                                    <h3>Sony Srs-Xb13</h3>
+                                  </div>
+                                  <div class="description-prod">
+                                    <p>Compact Bluetooth Speaker with 16 Hours Battery Life</p>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="wcf-left"><span class="price">₹3099.000</span></div>
+                                    <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                          class="zmdi zmdi-shopping-basket"></i></a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="wsk-cp-product">
+                                <div class="wsk-cp-img"><img
+                                    src="https://m.media-amazon.com/images/I/71bjS0zvNgL._SX522_.jpg" alt="Product"
+                                    class="img-responsive" /></div>
+                                <div class="wsk-cp-text">
+                                  <div class="category">
+                                    <span>Home Theatre</span>
+                                  </div>
+                                  <div class="title-product">
+                                    <h3>Sony HT-S40R</h3>
+                                  </div>
+                                  <div class="description-prod">
+                                    <p>Real 5.1ch Dolby Audio Soundbar for TV with Subwoofer</p>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="wcf-left"><span class="price">₹24989.000</span></div>
+                                    <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                          class="zmdi zmdi-shopping-basket"></i></a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="wsk-cp-product">
+                                <div class="wsk-cp-img"><img
+                                    src="https://m.media-amazon.com/images/I/81WwnZ7fWoS._SX522_.jpg" alt="Product"
+                                    class="img-responsive" /></div>
+                                <div class="wsk-cp-text">
+                                  <div class="category">
+                                    <span>Party Speaker</span>
+                                  </div>
+                                  <div class="title-product">
+                                    <h3>Sony SRS-XE300 X-Series</h3>
+                                  </div>
+                                  <div class="description-prod">
+                                    <p>Karaoke/Guitar Input, IPX4 Splashproof Protection</p>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="wcf-left"><span class="price">₹24989.000</span></div>
+                                    <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                          class="zmdi zmdi-shopping-basket"></i></a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="wsk-cp-product">
+                                <div class="wsk-cp-img"><img
+                                    src="https://m.media-amazon.com/images/I/91goQH2pPDL._SX522_.jpg" alt="Product"
+                                    class="img-responsive" /></div>
+                                <div class="wsk-cp-text">
+                                  <div class="category">
+                                    <span>Shock Proof</span>
+                                  </div>
+                                  <div class="title-product">
+                                    <h3>Sony SRS-XE300 X-Series</h3>
+                                  </div>
+                                  <div class="description-prod">
+                                    <p>IP67 Waterproof, Dustproof & Shockproof</p>
+                                  </div>
+                                  <div class="card-footer">
+                                    <div class="wcf-left"><span class="price">₹12989.000</span></div>
+                                    <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                          class="zmdi zmdi-shopping-basket"></i></a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--fourth product-->
+                          <h1 class="neta">REALME</h1>
+                          <div class="shell">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-md-3">
+                                  <div class="wsk-cp-product">
+                                    <div class="wsk-cp-img">
+                                      <img src="https://m.media-amazon.com/images/I/71f1Sh8NuxL._SX522_.jpg"
+                                        alt="Product" class="img-responsive" />
+                                    </div>
+                                    <div class="wsk-cp-text">
+                                      <div class="category">
+                                        <span>Best in Budget</span>
+                                      </div>
+                                      <div class="title-product">
+                                        <h3>TechLife Buds T100</h3>
+                                      </div>
+                                      <div class="description-prod">
+                                        <p>Earbuds with mic, AI ENC for Calls, Google Fast Pair</p>
+                                      </div>
+                                      <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">₹1349.00</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                              class="zmdi zmdi-shopping-basket"></i></a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="wsk-cp-product">
+                                    <div class="wsk-cp-img"><img
+                                        src="https://m.media-amazon.com/images/I/71xtnSu+lhL._SX522_.jpg" alt="Product"
+                                        class="img-responsive" /></div>
+                                    <div class="wsk-cp-text">
+                                      <div class="category">
+                                        <span>Dolby Atmos</span>
+                                      </div>
+                                      <div class="title-product">
+                                        <h3>realme Buds T300</h3>
+                                      </div>
+                                      <div class="description-prod">
+                                        <p>30dB ANC, 360° Spatial Audio Effect, 12.4mm Dynamic Bass</p>
+                                      </div>
+                                      <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">₹2299.000</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                              class="zmdi zmdi-shopping-basket"></i></a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="wsk-cp-product">
+                                    <div class="wsk-cp-img"><img
+                                        src="https://m.media-amazon.com/images/I/61xqefY2rZL._SX522_.jpg" alt="Product"
+                                        class="img-responsive" /></div>
+                                    <div class="wsk-cp-text">
+                                      <div class="category">
+                                        <span>Spatial Audio</span>
+                                      </div>
+                                      <div class="title-product">
+                                        <h3>realme Buds Wireless 3</h3>
+                                      </div>
+                                      <div class="description-prod">
+                                        <p>Headphones,30dB ANC, Spatial Audio,13.6mm Dynamic</p>
+                                      </div>
+                                      <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">₹1599.000</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                              class="zmdi zmdi-shopping-basket"></i></a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="wsk-cp-product">
+                                    <div class="wsk-cp-img"><img
+                                        src="https://m.media-amazon.com/images/I/818PA1ovCiL._SX522_.jpg" alt="Product"
+                                        class="img-responsive" /></div>
+                                    <div class="wsk-cp-text">
+                                      <div class="category">
+                                        <span>Quick Charge</span>
+                                      </div>
+                                      <div class="title-product">
+                                        <h3>realme Buds Wireless 2</h3>
+                                      </div>
+                                      <div class="description-prod">
+                                        <p>Neo Bluetooth in Ear Earphones with Mic, Fast Charging</p>
+                                      </div>
+                                      <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">₹1298.000</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                              class="zmdi zmdi-shopping-basket"></i></a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="shell">
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col-md-3">
+                                      <div class="wsk-cp-product">
+                                        <div class="wsk-cp-img">
+                                          <img src="https://m.media-amazon.com/images/I/51AaZaTU2tL._SX522_.jpg"
+                                            alt="Product" class="img-responsive" />
+                                        </div>
+                                        <div class="wsk-cp-text">
+                                          <div class="category">
+                                            <span>Stylish Design</span>
+                                          </div>
+                                          <div class="title-product">
+                                            <h3>realme Buds 2</h3>
+                                          </div>
+                                          <div class="description-prod">
+                                            <p>Wired in Ear Earphones with Mic</p>
+                                          </div>
+                                          <div class="card-footer">
+                                            <div class="wcf-left"><span class="price">₹569.000</span></div>
+                                            <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                  class="zmdi zmdi-shopping-basket"></i></a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <div class="wsk-cp-product">
+                                        <div class="wsk-cp-img"><img
+                                            src="https://m.media-amazon.com/images/I/71m38gWC-HL._SX679_.jpg"
+                                            alt="Product" class="img-responsive" /></div>
+                                        <div class="wsk-cp-text">
+                                          <div class="category">
+                                            <span>Best in ANC</span>
+                                          </div>
+                                          <div class="title-product">
+                                            <h3>realme Buds Air 5 Pro</h3>
+                                          </div>
+                                          <div class="description-prod">
+                                            <p>50dB ANC, realBoost Dual Coaxial Drivers, 360° Audio</p>
+                                          </div>
+                                          <div class="card-footer">
+                                            <div class="wcf-left"><span class="price">₹4499.000</span></div>
+                                            <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                  class="zmdi zmdi-shopping-basket"></i></a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <div class="wsk-cp-product">
+                                        <div class="wsk-cp-img"><img
+                                            src="https://m.media-amazon.com/images/I/81s6XABZ8lL._SX679_.jpg"
+                                            alt="Product" class="img-responsive" /></div>
+                                        <div class="wsk-cp-text">
+                                          <div class="category">
+                                            <span>Low Latency</span>
+                                          </div>
+                                          <div class="title-product">
+                                            <h3>realme Buds Air 5</h3>
+                                          </div>
+                                          <div class="description-prod">
+                                            <p>50dB ANC, 12.4mm Mega Titanized Dynamic Bass Driver</p>
+                                          </div>
+                                          <div class="card-footer">
+                                            <div class="wcf-left"><span class="price">₹3499.000</span></div>
+                                            <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                  class="zmdi zmdi-shopping-basket"></i></a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <div class="wsk-cp-product">
+                                        <div class="wsk-cp-img"><img
+                                            src="https://m.media-amazon.com/images/I/51wEVsH7DLL._SX522_.jpg"
+                                            alt="Product" class="img-responsive" /></div>
+                                        <div class="wsk-cp-text">
+                                          <div class="category">
+                                            <span>Low Latency</span>
+                                          </div>
+                                          <div class="title-product">
+                                            <h3>realme Buds 2S</h3>
+                                          </div>
+                                          <div class="description-prod">
+                                            <p>Wireless 2S-Green,in-Ear</p>
+                                          </div>
+                                          <div class="card-footer">
+                                            <div class="wcf-left"><span class="price">₹1498.000</span></div>
+                                            <div class="wcf-right"><a href="#" class="buy-btn"><i
+                                                  class="zmdi zmdi-shopping-basket"></i></a></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <!-- Scroll Top Button -->
+                                  <a href="#" id="scroll-top"
+                                    class="scroll-top d-flex align-items-center justify-content-center"><i
+                                      class="bi bi-arrow-up-short"></i></a>
+
+                                  <!-- Preloader -->
+                                  <div id="preloader">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                  </div>
+
+                                  <!-- chatbot -->
+                                  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+                                  <script>
+                                    window.botpressWebChat.init({
+                                      composerPlaceholder: "Chat with PickZ",
+                                      botConversationDescription:
+                                        "This chatbot was built surprisingly fast with Botpress",
+                                      botId: "69f03d93-47fb-4f42-b407-80c8e7e54ad9",
+                                      hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+                                      messagingUrl: "https://messaging.botpress.cloud",
+                                      clientId: "69f03d93-47fb-4f42-b407-80c8e7e54ad9",
+                                      webhookId: "b5baced0-2536-4110-94c6-a3a084c0a363",
+                                      lazySocket: true,
+                                      themeName: "prism",
+                                      botName: "PickZ",
+                                      avatarUrl:
+                                        "https://images-platform.99static.com//X0F3CDfCL6LcdPsSJNtRXSGn86Q=/108x1101:902x1895/fit-in/500x500/99designs-contests-attachments/126/126736/attachment_126736972",
+                                      stylesheet:
+                                        "https://webchat-styler-css.botpress.app/prod/71ffe266-f619-4ca4-98ee-0c9aea273dee/v60920/style.css",
+                                      frontendVersion: "v1",
+                                      useSessionStorage: true,
+                                      theme: "prism",
+                                      themeColor: "#2563eb",
+                                    });
+                                  </script>
+                                  <script src="/assets/utils/utils.js"></script>
+                                  <script
+                                    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+                                  <script
+                                    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
