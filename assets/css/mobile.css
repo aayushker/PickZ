@@ -8,11 +8,7 @@ body{
 }
 .jumbotron {
     background: linear-gradient(45deg, rgba(240, 240, 240, 0.5), rgba(224, 224, 224, 0.5)), url('path/to/your/textured-image.png');
-<<<<<<< HEAD
     color: #2c3e50; 
-=======
-    color: #2c3e50; /* Dark text color that complements the background */
->>>>>>> c422772bf30f18b4ce96cc30148af3be63b7abd8
     padding: 150px 0;
     border-radius: 0;
     background-size: cover;
@@ -148,10 +144,6 @@ body{
 .wsk-cp-text .description-prod p{
   margin:0;
 }
-<<<<<<< HEAD
-=======
-/* Truncate */
->>>>>>> c422772bf30f18b4ce96cc30148af3be63b7abd8
 .wsk-cp-text .description-prod {
   text-align:center;
   width: 100%;

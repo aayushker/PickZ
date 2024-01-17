@@ -251,7 +251,7 @@ a.buy-btn{
 }
 .jumbotron {
   background: linear-gradient(45deg, rgba(240, 240, 240, 0.5), rgba(224, 224, 224, 0.5)), url('path/to/your/textured-image.png');
-  color: #2c3e50; /* Dark text color that complements the background */
+  color: #2c3e50;
   padding: 150px 0;
   border-radius: 0;
   background-size: cover;
