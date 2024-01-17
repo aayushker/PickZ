@@ -1,1090 +1,745 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Premium Mobile Experience</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <style>
-    body {
-      background-color: #2c3e50; /* Dark background color for the page */
-      color: #fff; /* Light text color for the page */
-    }
-
-    /* Custom styles for the full-width Jumbotron */
-    .jumbotron {
-      background: linear-gradient(45deg, #2c3e50, #34495e), url('path/to/your/textured-image.png'); /* Gradient background with textured overlay */
-      color: #fff; /* Text color on the Jumbotron */
-      padding: 150px 0; /* Increased height for the Jumbotron */
-      border-radius: 0; /* No border-radius for full-width */
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      overflow: hidden;
-      width: 100%; /* Full width */
-      margin: 0; /* Remove default margin */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
-    }
-
-    .jumbotron::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3); /* Textured overlay to enhance the mobile phone feel */
-    }
-
-    /* Custom styles for the components within the Jumbotron */
-    .jumbotron h1,
-    .jumbotron p {
-      transition: color 0.3s ease-in-out; /* Smooth transition for text color */
-    }
-
-    .jumbotron h1 {
-      font-size: 3.5rem; /* Larger font size for the main title */
-      font-weight: bold;
-      line-height: 1.2; /* Improved line height for better readability */
-    }
-
-    .jumbotron p {
-      font-size: 1.5rem; /* Larger font size for the description */
-      font-weight: 300; /* Lighter font weight for the description */
-      line-height: 1.5; /* Improved line height for better readability */
-    }
-
-    /* Custom styles for the lines */
-    .line {
-      height: 1px; /* Height of the line */
-      width: 50%; /* Width of the line */
-      background-color: #f39c12; /* Color of the line */
-      margin: 20px 0; /* Spacing above and below the line */
-    }
-
-    /* Custom styles for the brand sections */
-    .brand-section {
-      padding: 80px 0; /* Adjusted padding for each brand section */
-    }
-
-    /* Custom styles for the cards within each brand section */
-    .card {
-      background-color: #34495e; /* Dark background color for the cards */
-      color: #fff; /* Light text color for the cards */
-      border: none; /* No border for the cards */
-      border-radius: 0; /* No border-radius for the cards */
-      margin-bottom: 30px; /* Spacing between cards */
-      overflow: hidden;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .card:hover .carousel-inner {
-      transform: translateX(0); /* Show the full width of the carousel on hover */
-    }
-
-    .card-img-top {
-      border-bottom: 1px solid #2c3e50; /* Border at the bottom of the card image */
-    }
-
-    .card-title {
-      font-weight: bold; /* Bold font for the card title */
-    }
-
-    .card-text {
-      font-size: 1.2rem; /* Font size for the card text */
-    }
-
-    .carousel-inner {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .carousel-item {
-      width: 100%; /* Full width for each carousel item */
-      flex: 0 0 auto;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .tooltip-inner {
-      background-color: #333; /* Tooltip background color */
-    }
-
-    .tooltip.bs-tooltip-top .tooltip-arrow::before {
-      border-top-color: #333; /* Tooltip arrow color for top placement */
-    }
-
-    .tooltip.bs-tooltip-right .tooltip-arrow::before {
-      border-right-color: #333; /* Tooltip arrow color for right placement */
-    }
-
-    .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
-      border-bottom-color: #333; /* Tooltip arrow color for bottom placement */
-    }
-
-    .tooltip.bs-tooltip-left .tooltip-arrow::before {
-      border-left-color: #333; /* Tooltip arrow color for left placement */
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Title</title>
 </head>
 <body>
-  <!-- Full-width Jumbotron -->
-  <div class="jumbotron text-center">
-    <h1 class="display-2">Elevate Your Mobile Experience</h1>
-    <p class="lead">Crafting excellence in every pixel. Transform your digital presence with innovation.</p>
-    <div class="line mx-auto"></div> <!-- Centered line -->
-    <p>Unleash the potential of your ideas through a captivating mobile journey. Embrace success with a professional touch.</p>
-  </div>
 
-  <!-- Brand Section 1: Lenovo -->
-  <section class="brand-section">
-    <div class="container">
-      <h2 class="text-center mb-5">Lenovo</h2>
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/m/u/p/-original-imagu3kmnhbskzq7.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/w/a/b/-original-imagtdwbsce8utz9.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/d/c/o/-original-imagtdwbbfdhhst7.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/g/s/e/-original-imagtdwbaqvqkdv5.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">IdeaPad Slim 5i 13th Gen (14, Intel)
-              </h5>
-              <p class="card-text">Smart, slim, light, & military-grade 35.56cms (14) laptop
-
-                Powered by 13th Gen Intel® Core™ processor
-                
-                Real-time system responsiveness via Lenovo AI Engine
-                
-                Optional fingerprint reader & hybrid FHD infrared camera
-                </p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
+    <div class="container text-center">
+        <h1>Product card</h1>
+          <span>Create With <i class="zmdi zmdi-favorite red"></i>  By: <strong>Deni Kurniawan</strong> From: <i><a href="http://blog.wingerdstok.com" class="wsk-btn">Wingerdstok</a></i></span>
         </div>
-        <!-- Card 2 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/b/d/i/-original-imagzhefhc84rmbf.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/i/z/6/-original-imagzhefg3yfphng.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/s/q/z/-original-imagzhefwzqqdnbb.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/l/r/d/-original-imagufyhn6mrrmrj.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Lenovo V15 AMD Ryzen 5 Hexa Core 5500U </h5>
-              <p class="card-text">8 GB/512 GB SSD/Windows 11 Home V15 G2 ALC Thin and Light Laptop 15.6 Inch, Black, 1.7 Kg</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-         <!-- Card 3  -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/n/n/q/-original-imagu3kmvtfdy5hk.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/c/w/n/gaming-3-gaming-laptop-lenovo-original-imaghtkr78nzdzm8.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/l/f/m/gaming-3-gaming-laptop-lenovo-original-imaghtkrz5zzrvkh.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61iA3wAvJwL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>  -->
-                <!-- Add more carousel items for Samsung as needed -->
-               </div> 
-             </div>
-            <div class="card-body">
-              <h5 class="card-title">IdeaPad Slim 3 Gen 6 (15, AMD)
-              </h5>
-              <p class="card-text">Learn from home and beyond with the IdeaPad 3 Gen 6 (15, AMD) laptop.
-
-                It balances the performance of AMD Ryzen™ 5000 H-Series processors with workflow-improving smart features.
-                
-                All this while keeping your system cool and quiet via intelligent thermals and a vivid 39.62cms (15.6) FHD display with razor-thin bezels.
-                
-                </p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
         
-        <!-- Card 1 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                 <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/t/o/b/galaxy-flip5-sm-f731blgains-samsung-original-imagru5pcagms7me.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/9/z/x/14alc7-thin-and-light-laptop-lenovo-original-imaggujjhgppfkfg.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>  
-                 <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/a/d/v/14alc7-thin-and-light-laptop-lenovo-original-imaggujjugfcsuhy.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                  <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/z/e/9/14alc7-thin-and-light-laptop-lenovo-original-imaggujjhq5zsvvm.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
+        <h1 class="neta">Lenovo</h1>
+        <div class="shell">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img">
+                    <img src="https://m.media-amazon.com/images/I/711qTl1OFOL._AC_SX679_.jpg" alt="Lenovo" class="img-responsive" />
+                  </div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                      <span>360° Degree Roatation</span>
+                    </div>
+                    <div class="title-product">
+                      <h3>Lenovo Chromebook Laptop</h3>
+                    </div>
+                    <div class="description-prod">
+                      <p>Touchscreen Stylus Pen 2023 - Flex 3i Chromebook 8GB RAM 64GB</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">INR35,729.16</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/715B+iyN8BL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                      <span>Intel UHD Graphics</span>
+                    </div>
+                    <div class="title-product">
+                      <h3>Lenovo 2023 Flagship IdeaPad 3i</h3>
+                    </div>
+                    <div class="description-prod">
+                      <p>14" FHD Screen, Dual-core Intel i3-1115G4 Processor (Upto 4.10 GHz)</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">INR31,492.25</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71X33ctoF3L._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                      <span>Touchscreen</span>
+                    </div>
+                    <div class="title-product">
+                      <h3>Lenovo Flex 3i Chromebook</h3>
+                    </div>
+                    <div class="description-prod">
+                      <p>Touchscreen Laptop - 2in1 15.6 FHD IPS Display - Intel Pentium Silver</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">INR33,236.37</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71i1HJy190L._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                      <span>Business Laptop</span>
+                    </div>
+                    <div class="title-product">
+                      <h3>IdeaPad 3 14" FHD Business Laptop </h3>
+                    </div>
+                    <div class="description-prod">
+                      <p>512GB PCIe SSD, Intel Iris Xe Graphics, Fingerprint Reader, Wi-Fi 6</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">INR54,758.29</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">IdeaPad Flex 5 Gen 7 (14, AMD)
-              </h5>
-               <p class="card-text">Powered by up to AMD Ryzen™ 7 Mobile Processors for fast, reliable performance
 
-                Enjoy gorgeous visuals in up to 2.2K (2240 x 1400) resolution with 16:10 aspect ratio
-                
-                2-in-1 design lets you work and play flexibly in four modes—laptop, tablet, tent, or stand
-                
-                </p> 
-               <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Add more cards for Samsung as needed -->
-      </div>
-    </div>
-  </section>
-  <!-- Brand Section 1: DELL-->
-   <section class="brand-section">
-    <div class="container">
-      <h2 class="text-center mb-5">DELL</h2>
-      <div class="row"> 
-        <!-- Card 1 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/p/6/q/latitude-business-laptop-dell-original-imagzeyvgpbegkmw.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/m/2/l/latitude-business-laptop-dell-original-imagzeyvzxt5tdyj.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div> 
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/z/n/v/inspiron-3520-thin-and-light-laptop-dell-original-imagm5skpnwgkmuu.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/r/c/6/inspiron-3520-thin-and-light-laptop-dell-original-imagm5sk8ht85wwm.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for apple as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">DELL Intel Core i3 11th Gen </h5> 
-               <p class="card-text">8 GB/256 GB SSD/32 GB EMMC Storage/Ubuntu Latitude 3420 Business Laptop 14 Inch, Black, 1.52 Kg</p> 
-               <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 2 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/9/g/9/inspiron-3520-laptop-dell-original-imagtegwwhwk9ghn.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/b/c/d/inspiron-laptop-dell-original-imagqz4qjugp7xz7.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://imgs.search.brave.com/LbPVWNx0G35eEOhfmY5KRHwhHmhkgQ-EDve_50AzU2E/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/YXBsdXMtbWVkaWEt/bGlicmFyeS1zZXJ2/aWNlLW1lZGlhLzEz/ODllOWY2LTU5NmUt/NDRhNy05ZTE1LWM1/MWIxODUwYjZlNi5f/X0NSMCwwLDk3MCw2/MDBfUFQwX1NYOTcw/X1YxX19fLmpwZw" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                 <div class="carousel-item active">
-                  <img src="https://imgs.search.brave.com/93EeQXh3cMwGe0RKk6jV-a6SB4zR7Z0BTi5BkbNbSds/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tdWRp/dGEuY29tLm5wL21l/ZGlhL2NhdGFsb2cv/cHJvZHVjdC9jYWNo/ZS8yNzhhYmJjODkx/MWVlNWJkOGQ5ZDM2/ZWY5MDRhODA1Zi92/L28vdm9zdHJvLTM1/MjAtbGFwdG9wLTAy/LmpwZw" class="d-block w-100" alt="Samsung Model 1">
-                </div>  
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">DELL Inspiron 15 3520 Intel Core i5 12th Gen Core i5</h5>
-               <p class="card-text">16 GB/512 GB SSD/Windows 11 Home Inspiron 3520 Laptop 15.6 inch, Platinum Silver, 1.65 kg, With MS Office</p> 
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 3 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/k/a/s/essential-thin-and-light-laptop-dell-original-imagsszyxgbed8zc.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/p/h/1/inspiron-7430-thin-and-light-laptop-dell-original-imagt66ff5sgyywj.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/i/w/s/inspiron-laptop-dell-original-imagsyyjgayu4nhc.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/k/m/2/inspiron-laptop-dell-original-imagsbvtzx9zwfgt.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">DELL Intel Core i3 13th Gen </h5>
-              <p class="card-text">8 GB/1 TB SSD/Windows 11 Home IC7430XYW6F002ORS1 Thin and Light Laptop 14 inch, Platinum Silver, With MS Office.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 4 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/l45xea80/computer/m/q/7/vostro-3425-thin-and-light-laptop-dell-original-imagf4mth22ydgqs.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/2/e/o/inspiron-3520-laptop-dell-original-imagpc58nfqhp7gf.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/p/x/b/inspiron-3520-laptop-dell-original-imagpc58gfjdgq7j.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/f/f/b/vostro-3420-thin-and-light-laptop-dell-original-imagjhbkvb4cpzzt.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">DELL Vostro AMD Ryzen 5 Hexa Core 5625U</h5>
-              <p class="card-text">16 GB/512 GB SSD/Windows 11 Home Vostro 3425 Metal Thin and Light Laptop 14 Inch, Titan Grey Aluminium, 1.48 Kg, With MS Office</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 5 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/d/9/-original-imagtc2qzgnnuhxh.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/u/m/3/-original-imagtc5ffhbausfy.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/i/h/z/-original-imagtc5fbxefnjtj.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/e/g/k/-original-imagtc5f2k44dgax.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">I phone 15</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Card 6 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/y/h/a/iphone-13-mini-mlk93hn-a-apple-original-imag6vp6thrzzcjg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/a/i/l/iphone-13-mini-mlk93hn-a-apple-original-imag6vp6x67yypzk.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/y/h/a/iphone-13-mini-mlk93hn-a-apple-original-imag6vp6thrzzcjg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/e/g/-original-imagh7g8k7ttcdkc.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">I phone 13 mini </h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Add more cards for Samsung as needed -->
-      <!-- </div>
-    </div>
-  </section> -->
-  <!-- Brand Section 1: Hp -->
-   <section class="brand-section">
-    <div class="container">
-      <h2 class="text-center mb-5">Hp</h2>
-      <div class="row">
-        <!-- Card 1 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/8/i/j/-original-imagthcbgurdzwuc.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/j/q/x/-original-imagthcbb58yyja2.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <!-- <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61GXMU1L5YL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/e/h/1/-original-imagwzhqzx3fzenf.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>  -->
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">HP Victus AMD Ryzen 5 Hexa Core 5600H </h5>
-              <p class="card-text">8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/AMD Radeon RX 6500M/60 Hz 15-fb0147AX Gaming Laptop  (15.6 Inch, Performance Blue, 2.37 Kg)</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 2 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/b/r/k/-original-imagsz5x5x3vkt8c.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/w/4/3/-original-imagg26ugndyzudk.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/v/i/0/-original-imagg26umtndqxct.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/9/s/-original-imags3bcyuexxmmx.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">MSI GF63 Intel Core i5 11th Gen 112</h5>
-              <p class="card-text">8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce GTX 1650/60 Hz</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 3 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/3/1/9/-original-imagwzwbhjrsen82.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/m/v/i/-original-imagpecqf7vtkzfu.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/2/p/y/-original-imagwzwbcxay567z.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/3/7/x/-original-imagpecq94rne9zh.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">HP Intel Intel Core i5 11th Gen 1155G7 </h5>
-              <p class="card-text">8 GB/512 GB SSD/Windows 11 Home 15s- fr4000TU Thin and Light Laptop 15.6 Inch, Natural Silver, 1.69 Kg, With MS Office</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 1 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                 <!-- <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/41uLxtgZ7bL.SX300_SY300_QL70_FMwebp.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/41QeTDEBrfL.SY741.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/21ejKw-RH-L.SY741.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/21SYKUoaK6L.SY741.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Redmi Note 12 Pro+</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>  -->
-        <!-- Card 5 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/b/r/k/-original-imagsz5x5x3vkt8c.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/w/4/3/-original-imagg26ugndyzudk.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/1/m/1/-original-imags9wbwzcv7hvx.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/3/g/w/-original-imagpz9ft9pjthbp.jpeg?q=70&crop=false" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">MSI GF63 Intel Core i5 11th Gen 11260H </h5>
-              <p class="card-text">8 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce GTX 1650/144 Hz</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 6 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ky7lci80/mobile/e/j/x/-original-imagag2gatsxzcuv.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ky1vl3k0/mobile/2/k/h/-original-imagadbyajtxpsgd.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div> -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/kxz0pe80/mobile/a/q/x/-original-imagaaxkgrq48xzf.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/kxz0pe80/mobile/k/f/a/-original-imagaaxkzakbdf9g.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Mi 11I 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Add more cards for Samsung as needed -->
-      <!-- </div>
-    </div>
-  </section> -->
-  <!-- Brand Section 1: Samsung -->
-    <section class="brand-section">
-    <div class="container">
-      <h2 class="text-center mb-5">ONEPLUS</h2>
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61LB+d0vheL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71EA48-X7zL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61QvnKugRuL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61CTkx2jIsL.SX679.jpg" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">OnePlus Nord CE 3 Lite 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 2 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61u9zN1HYCL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71klFSrkIOL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/51rFpiGJFRL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/519zMN+tUsL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">OnePlus 11R 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 1 -->
-         <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61QRgOgBx0L.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                 <!-- <div class="carousel-item">
-                  <img src="" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/510YZx4v3wL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                 <div class="carousel-item active">
-                  <img src="path/to/samsung-model1.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>  -->
-                <!-- Add more carousel items for Samsung as needed -->
-               <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">OnePlus Nord CE 3 Lite 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>  -->
-        <!-- Card 1 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/41R9oD3K25L.SX300_SY300_QL70_FMwebp.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/51BJYsMmF8L.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/51MwYxcvMxL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/51mh6+YGftL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">OnePlus Nord CE 2 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 5 -->
-          <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/41o3CoW58tL.SX300_SY300_QL70_FMwebp.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71BwGzRUWgL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/61mZvk2WHAL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71HS7GzW+gL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Motorola Moto G31</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 1 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/l1qrjbk0/mobile/t/e/j/-original-imagd8pyehxtp4yg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/l1nwnm80/mobile/l/k/i/-original-imagd6kvufxzxgbh.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/l1nwnm80/mobile/d/5/p/-original-imagd6kvgemy4was.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- <div class="carousel-item active">
-                  <img src="path/to/samsung-model1.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Motorola Moto G22</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Add more cards for Samsung as needed -->
-      <!-- </div>
-    </div>
-  </section> -->
-  <!-- Brand Section 1: Samsung -->
-  <section class="brand-section">
-    <div class="container">
-      <h2 class="text-center mb-5">REALME </h2>
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/819bwF7gjfL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/71DoeFhRxrL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71CSQz2v1wL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/51hcOWADb3L.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Realme narzo 50i Prime</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <!-- Carousel Item 1 -->
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81ogvU1j6qL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/81ZWQBCvCgL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/7179Std+mzL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71VwpCcxDmL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Realme narzo N55</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81WimZLWH1L.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/81yNIhv3kLL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/719ftrLGjTL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/51WnhxK6fqL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Realme narzo 60X 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 1 -->
-         <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> 
-                <!-- Carousel Item 1 -->
-                 <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/71HZ0tigFFL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <!-- Carousel Item 2 -->
-                 <div class="carousel-item">
-                  <img src="https://m.media-amazon.com/images/I/81I++oJCbjL.SX679.jpg" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/816gp9z+8pL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://m.media-amazon.com/images/I/81CMu8jKxRL.SX679.jpg" class="d-block w-100" alt="Samsung Model 1">
-                </div> 
-                <!-- Add more carousel items for Samsung as needed -->
-               </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Realme 11 Pro 5G</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Card 1 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/l3rmzrk0/mobile/z/i/t/-original-imagetme2k2rva45.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ksgehzk0/mobile/j/z/j/gt-5g-rmx2202-realme-original-imag6ygf65rjzgww.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ksgehzk0/mobile/b/y/g/gt-5g-rmx2202-realme-original-imag6ygfn9fzbzyy.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/ksgehzk0/mobile/o/i/c/gt-5g-rmx2202-realme-original-imag6ygfkebbvuyh.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              <!-- </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Realme GT</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Card 1 -->
-        <!-- <div class="col-lg-6">
-          <div class="card">
-            <div id="samsungCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner"> -->
-                <!-- Carousel Item 1 -->
-                <!-- <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/0/n/r/narzo-n53-rmx3761-realme-original-imagpygzxcuysz9k.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Carousel Item 2 -->
-                <!-- <div class="carousel-item">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/e/t/x/narzo-n53-rmx3761-realme-original-imagpygzfd9d4yjv.jpeg?q=70" class="d-block w-100" alt="Samsung Model 2">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/2/z/narzo-n53-rmx3761-realme-original-imagpygznvyznc2r.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div>
-                <div class="carousel-item active">
-                  <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/q/k/c/narzo-n53-rmx3761-realme-original-imagpygzyhgpqzwg.jpeg?q=70" class="d-block w-100" alt="Samsung Model 1">
-                </div> -->
-                <!-- Add more carousel items for Samsung as needed -->
-              </div>
-            </div>
-            <!-- <div class="card-body">
-              <h5 class="card-title">Realme Narzo N53</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in efficitur justo.</p>
-              <div data-bs-toggle="tooltip" data-bs-placement="top" title="Specifications">
-                <button type="button" class="btn btn-info">View Specifications</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- Add more cards for Samsung as needed -->
-      <!-- </div>
-    </div>
-  </section> -->
+            <div class="shell">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img">
+                          <img src="https://m.media-amazon.com/images/I/81z8cXyqmOL._AC_SX679_.jpg" alt="Product" class="img-responsive" />
+                        </div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>Gaming Laptop</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>Lenovo IdeaPad Gaming 3i</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>Everyday Gaming Laptop - NVIDIA GeForce RTX 3050Ti Graphics - 15.6</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">INR 74,700.61</span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61pEo8oo2DL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>NVIDIA Geforce RTX</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>165Hz WQHD IPS Gaming Laptop 2023</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">INR 7,477.54
+                            </span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61En0Q763qL._AC_SL1500_.jpg" alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span> Backlit Keyboard, Fingerprint Reader</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>Lenovo ThinkPad T14 Laptop</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>ThinkPad T14 Laptop, Intel Core i5-1135G7 Processor, Backlit Keyboard, Fingerprint Reader, 14" FHD Anti-Glare Display</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">INR 66,473.57</span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61QGMX0Qy6L._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>Student friendly</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>Ideapad 3 Laptop</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>11th Gen Intel Core i3-1115G4 Processor, 8GB DDR4 RAM, 256GB</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">Rp500.000</span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-  <!-- Brand Section 2: Apple -->
-  <!-- Add similar sections for other brands (Apple, Xiaomi, OnePlus, Motorola) -->
 
-  <!-- Rest of your content -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script>
-    // Initialize Bootstrap tooltips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  </script>
+        
+        <h1 class="neta">DELL</h1>
+        <div class="shell">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img">
+                    <img src="https://m.media-amazon.com/images/I/81L4jjyedYL._AC_SX679_.jpg" alt="Lenovo" class="img-responsive" />
+                  </div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                      <span>1TB PCIE SSD</span>
+                    </div>
+                    <div class="title-product">
+                      <h3>Dell Newest Inspiron 15 Business Laptop</h3>
+                    </div>
+                    <div class="description-prod">
+                      <p>15.6" FHD Touchscreen, AMD Ryzen 5-7530U (Up tp 4.5GHz)</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">INR35,729.16</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/6108YwaESdL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                      <span> i7-1355U Processor</span>
+                    </div>
+                    <div class="title-product">
+                      <h3>Dell Newest Inspiron 15 3530 Laptop</h3>
+                    </div>
+                    <div class="description-prod">
+                      <p>Processor, 16GB DDR4 RAM, 1TB PCIe SSD, Webcam, HDMI</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">INR 7,477.54
+                      </span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61VRqYjVIvL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                      <span>Intel Core i7 11th Gen Processor </span>
+                    </div>
+                    <div class="title-product">
+                      <h3>Dell Latitude 7420 FHD Laptop</h3>
+                    </div>
+                    <div class="description-prod">
+                      <p>16GB Ram, 512GB SSD, WiFi, Bluetooth Windows 11 Pro</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">INR42,294.34</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="wsk-cp-product">
+                  <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71dAcuFsKuL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                  <div class="wsk-cp-text">
+                    <div class="category">
+                      <span>Intel Iris Xe Graphics</span>
+                    </div>
+                    <div class="title-product">
+                      <h3>Dell Inspiron 15 3501</h3>
+                    </div>
+                    <div class="description-prod">
+                      <p>DDR4 RAM, 512GB SSD, Intel Iris Xe Graphics, Bluetooth 5.0, WiFi
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="wcf-left"><span class="price">INR58,995.20</span></div>
+                      <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="shell">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img">
+                          <img src="https://m.media-amazon.com/images/I/718p4Q8QeeL._AC_SX679_.jpg" alt="Product" class="img-responsive" />
+                        </div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>1TB PCIe SSD</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>Dell Newest Inspiron 7620 2-in-1 Laptop</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>16" FHD+ Touch Display, 12th Gen Intel Core i7-1260P, 64GB DDR4 RAM</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">INR115,416</span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61pEo8oo2DL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>NVIDIA Geforce RTX</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>165Hz WQHD IPS Gaming Laptop 2023</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>Description Product tell me how to change playlist height size like 600px in html5 player. player good work now check this link</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">INR 7,477.54
+                            </span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71PxCB4DgrL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>Business Laptop</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>Dell Vostro 5620 </h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>12th Gen Intel Core i7-1260P, 16GB RAM, 512GB SSD, FHD Webcam</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">INR77,193.40</span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="wsk-cp-product">
+                        <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/814PM9a0cCL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                        <div class="wsk-cp-text">
+                          <div class="category">
+                            <span>Thunderbolt, Webcam</span>
+                          </div>
+                          <div class="title-product">
+                            <h3>Dell Latitude 5520 Laptop</h3>
+                          </div>
+                          <div class="description-prod">
+                            <p>Dell Latitude 5520 PC Intel Core i7-1185G7 Processor, Thunderbolt</p>
+                          </div>
+                          <div class="card-footer">
+                            <div class="wcf-left"><span class="price">INR 7,477.54
+                            </span></div>
+                            <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!--Hp-->
+                  <div class="container text-center">
+                  
+                    
+                    <h1 class="neta">Hp</h1>
+                    <div class="shell">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="wsk-cp-product">
+                              <div class="wsk-cp-img">
+                                <img src="https://m.media-amazon.com/images/I/71aTEZOda0L._AC_SX679_.jpg" alt="Lenovo" class="img-responsive" />
+                              </div>
+                              <div class="wsk-cp-text">
+                                <div class="category">
+                                  <span>Up to 11 Hours Battery Life</span>
+                                </div>
+                                <div class="title-product">
+                                  <h3>HP Newest Pavilion</h3>
+                                </div>
+                                <div class="description-prod">
+                                  <p>Touchscreen Anti-Glare Laptop, 16GB RAM, 1TB SSD Storage</p>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="wcf-left"><span class="price">INR36,477.83</span></div>
+                                  <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="wsk-cp-product">
+                              <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/715B+iyN8BL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                              <div class="wsk-cp-text">
+                                <div class="category">
+                                  <span>Anti-Glare HD Laptop</span>
+                                </div>
+                                <div class="title-product">
+                                  <h3>hp Newest 15.6'' Anti-Glare HD Laptop</h3>
+                                </div>
+                                <div class="description-prod">
+                                  <p> Intel Quad-core Processor, 16GB RAM, 128GB SSD+ 128GB USB Storage</p>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="wcf-left"><span class="price">INR31,492.25</span></div>
+                                  <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="wsk-cp-product">
+                              <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71juF7A+MsL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                              <div class="wsk-cp-text">
+                                <div class="category">
+                                  <span> Gaming Laptop</span>
+                                </div>
+                                <div class="title-product">
+                                  <h3>HP Victus 15</h3>
+                                </div>
+                                <div class="description-prod">
+                                  <p>NVIDIA GeForce RTX 2050, HDMI, Webcam, Backlit</p>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="wcf-left"><span class="price">INR51,434.57</span></div>
+                                  <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="wsk-cp-product">
+                              <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71WkeQeyxkL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                              <div class="wsk-cp-text">
+                                <div class="category">
+                                  <span>14" HD Touchscreen</span>
+                                </div>
+                                <div class="title-product">
+                                  <h3>HP Premium Laptop</h3>
+                                </div>
+                                <div class="description-prod">
+                                  <p>Long Battery Life, Online Conferencing, Natural Silver, Win 10</p>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="wcf-left"><span class="price">INR33,154.11</span></div>
+                                  <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class="shell">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-md-3">
+                                  <div class="wsk-cp-product">
+                                    <div class="wsk-cp-img">
+                                      <img src="https://m.media-amazon.com/images/I/71hxLU8DYEL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Product" class="img-responsive" />
+                                    </div>
+                                    <div class="wsk-cp-text">
+                                      <div class="category">
+                                        <span>Intel Dual-Core</span>
+                                      </div>
+                                      <div class="title-product">
+                                        <h3>HP 2022 Premium 14-inch HD Thin and Light Laptop</h3>
+                                      </div>
+                                      <div class="description-prod">
+                                        <p>Everyday Gaming Laptop - NVIDIA GeForce RTX 3050Ti</p>
+                                      </div>
+                                      <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">	INR24,013.88</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="wsk-cp-product">
+                                    <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61pEo8oo2DL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                                    <div class="wsk-cp-text">
+                                      <div class="category">
+                                        <span>NVIDIA Geforce RTX</span>
+                                      </div>
+                                      <div class="title-product">
+                                        <h3>165Hz WQHD IPS Gaming Laptop 2023</h3>
+                                      </div>
+                                      <div class="description-prod">
+                                        <p>Description Product tell me how to change playlist height size like 600px.</p>
+                                      </div>
+                                      <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">INR 7,477.54
+                                        </span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="wsk-cp-product">
+                                    <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61En0Q763qL._AC_SL1500_.jpg" alt="Product" class="img-responsive" /></div>
+                                    <div class="wsk-cp-text">
+                                      <div class="category">
+                                        <span> Intel Celeron N4120</span>
+                                      </div>
+                                      <div class="title-product">
+                                        <h3>HP Premium Stream 14" HD BrightView Laptop</h3>
+                                      </div>
+                                      <div class="description-prod">
+                                        <p> Intel Celeron N4120, 16GB RAM, 64GB eMMC Storage</p>
+                                      </div>
+                                      <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">INR 66,473.57</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="wsk-cp-product">
+                                    <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/51kK0BLesNL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                                    <div class="wsk-cp-text">
+                                      <div class="category">
+                                        <span>Student friendly</span>
+                                      </div>
+                                      <div class="title-product">
+                                        <h3>Ideapad 3 Laptop</h3>
+                                      </div>
+                                      <div class="description-prod">
+                                        <p>11th Gen Intel Core i3-1115G4 Processor, 8GB DDR4 RAM</p>
+                                      </div>
+                                      <div class="card-footer">
+                                        <div class="wcf-left"><span class="price">INR 69,473.57</span></div>
+                                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+  <!--Asus-->
+  
+  <div class="container text-center">
+                  
+                    
+    <h1 class="neta">Asus</h1>
+    <div class="shell">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="wsk-cp-product">
+              <div class="wsk-cp-img">
+                <img src="https://m.media-amazon.com/images/I/71+LIOKehyL._AC_SX679_.jpg" alt="Lenovo" class="img-responsive" />
+              </div>
+              <div class="wsk-cp-text">
+                <div class="category">
+                  <span>Intel Iris Xᵉ Graphics</span>
+                </div>
+                <div class="title-product">
+                  <h3>ASUS 2023 Vivobook 14 Laptop/h3>
+                </div>
+                <div class="description-prod">
+                  <p>Display, Intel Core i5-1235U CPU, Intel Iris Xᵉ Graphics</p>
+                </div>
+                <div class="card-footer">
+                  <div class="wcf-left"><span class="price">INR38,468.74</span></div>
+                  <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wsk-cp-product">
+              <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/715B+iyN8BL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+              <div class="wsk-cp-text">
+                <div class="category">
+                  <span>i7-1355U CPU</span>
+                </div>
+                <div class="title-product">
+                  <h3>ASUS Zenbook S 13 OLED Ultra Laptop</h3>
+                </div>
+                <div class="description-prod">
+                  <p>32GB RAM, 1TB SSD, Windows 11 Pro, Basalt Grey, UX5304VA-XS76T</p>
+                </div>
+                <div class="card-footer">
+                  <div class="wcf-left"><span class="price"> INR108,020.07</span></div>
+                  <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wsk-cp-product">
+              <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/61aL41S4-jL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+              <div class="wsk-cp-text">
+                <div class="category">
+                  <span>AMD Radeon Graphics,</span>
+                </div>
+                <div class="title-product">
+                  <h3>ASUS 2023 Newest Vivobook Laptop</h3>
+                </div>
+                <div class="description-prod">
+                  <p>12GB RAM, 512GB SSD, AMD Radeon Graphics, WiFi 6, Chiclet Keyboard, USB-A&C
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <div class="wcf-left"><span class="price">INR51,434.57</span></div>
+                  <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wsk-cp-product">
+              <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71Yt0E2CFOL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+              <div class="wsk-cp-text">
+                <div class="category">
+                  <span>14" HD Touchscreen</span>
+                </div>
+                <div class="title-product">
+                  <h3>AsusPremium Laptop</h3>
+                </div>
+                <div class="description-prod">
+                  <p>Long Battery Life, Online Conferencing, Natural Silver, Win 10</p>
+                </div>
+                <div class="card-footer">
+                  <div class="wcf-left"><span class="price">INR45,154.11</span></div>
+                  <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shell">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img">
+                      <img src="https://m.media-amazon.com/images/I/61QYxptc9SL._AC_SX679_.jpg" alt="Product" class="img-responsive" />
+                    </div>
+                    <div class="wsk-cp-text">
+                      <div class="category">
+                        <span>Good Battery Backup</span>
+                      </div>
+                      <div class="title-product">
+                        <h3>ASUS Vivobook 16 Laptop</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>16 inch Display, AMD Ryzen 7 5800HS Processor</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">INR42,376.60</span></div>
+                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71zJNkAPiBL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                    <div class="wsk-cp-text">
+                      <div class="category">
+                        <span>14” OLED Touch Display</span>
+                      </div>
+                      <div class="title-product">
+                        <h3>ASUS Zenbook 14 Flip OLED Laptop</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Iris Xe Graphics, 16GB RAM, 1TB SSD, Windows 11 Home, Ponder Blue</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">INR99,710.77
+                        </span></div>
+                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71ehzrGUO7L.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Product" class="img-responsive" /></div>
+                    <div class="wsk-cp-text">
+                      <div class="category">
+                        <span>FHD Display</span>
+                      </div>
+                      <div class="title-product">
+                        <h3>ASUS Laptop L510 Ultra Thin Laptop</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Intel Celeron N4020 Processor, 4GB RAM</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">INR 66,473.57</span></div>
+                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="wsk-cp-product">
+                    <div class="wsk-cp-img"><img src="https://m.media-amazon.com/images/I/71eVdRiG+eL._AC_SX679_.jpg" alt="Product" class="img-responsive" /></div>
+                    <div class="wsk-cp-text">
+                      <div class="category">
+                        <span>Gamming Laptop</span>
+                      </div>
+                      <div class="title-product">
+                        <h3>ASUS ROG Strix G16 (2023) Gaming Laptop</h3>
+                      </div>
+                      <div class="description-prod">
+                        <p>Intel Core i9-13980HX, 16GB DDR5, 1TB PCIe SSD, Wi-Fi 6E</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="wcf-left"><span class="price">INR149,566</span></div>
+                        <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
