@@ -1,12 +1,11 @@
 <h1 align="center" id="title">PickZ</h1>
 
-<p align="center"><img src="https://socialify.git.ci/aayushker/MiniProject/image?description=1&amp;descriptionEditable=PickZ&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;theme=Light" alt="project-image"></p>
-
 <p id="description">The project helps in finding the best suitable product according to your needs and eases the hassle to spend hours on searching the best product.</p>
 
 <h2>🚀 Demo</h2>
 
 [https://pickz.netlify.app/](https://pickz.netlify.app/)
+<br>
 [https://pickz.netlify.app/](https://pickz.vercel.app/)
   
   
@@ -34,11 +33,11 @@ Open the Command Pallete by pressing F1 or ctrl+shift+P and type Live Server: Op
 ```
 ## Authors
 
-- [@octokatherine](https://www.github.com/aayushraghav93)
-- [@octokatherine](https://www.github.com/AkshatSrivastav08)
-- [@octokatherine](https://www.github.com/Anshika0504)
-- [@octokatherine](https://www.github.com/B16y)
-- [@octokatherine](https://www.github.com/gauravdaultani)
+- [@AayushRaghav](https://www.github.com/aayushraghav93)
+- [@AkshatSrivastav](https://www.github.com/AkshatSrivastav08)
+- [@AnshikaAgarwal](https://www.github.com/Anshika0504)
+- [@BhavyaAgarwal](https://www.github.com/B16y)
+- [@GauravDaultani](https://www.github.com/gauravdaultani)
   
   
 <h2>💻 Built with</h2>
