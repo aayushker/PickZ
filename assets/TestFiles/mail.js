@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Configure Brevo API key
 const defaultClient = Brevo.ApiClient.instance;
-const apiKey = defaultClient.authentications['api-key'];
+const apiKey = defaultClient.authentications['f0d4c3e117764d258d289f7ee6d63e78'];
 apiKey.apiKey = '8fO3U41wRJpZTEhW';
 
 app.post('/send-email', (req, res) => {
