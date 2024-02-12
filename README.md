@@ -33,7 +33,6 @@ Open the Command Pallete by pressing F1 or ctrl+shift+P and type Live Server: Op
 ```
 ## Authors
 
-- [@AnshikaAgarwal](https://www.github.com/Anshika0504)
 - [@GauravDaultani](https://www.github.com/gauravdaultani)
   
   
