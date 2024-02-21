@@ -32,11 +32,8 @@ git clone https://github.com/aayushker/MiniProject
 Open the Command Pallete by pressing F1 or ctrl+shift+P and type Live Server: Open With Live Server to start a server or type Live Server: Stop Live Server to stop a server
 ```
 ## Authors
-
-- [@AayushRaghav](https://www.github.com/aayushraghav93)
 - [@AkshatSrivastav](https://www.github.com/AkshatSrivastav08)
 - [@AnshikaAgarwal](https://www.github.com/Anshika0504)
-- [@BhavyaAgarwal](https://www.github.com/B16y)
 - [@GauravDaultani](https://www.github.com/gauravdaultani)
   
   
